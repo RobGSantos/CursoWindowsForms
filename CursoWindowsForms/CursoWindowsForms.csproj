@@ -61,6 +61,12 @@
     <Compile Include="Frm_HellowWorld.Designer.cs">
       <DependentUpon>Frm_HellowWorld.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_ValidaSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ValidaSenha.Designer.cs">
+      <DependentUpon>Frm_ValidaSenha.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Frm_DemonstacaoKey.resx">
@@ -68,6 +74,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_HellowWorld.resx">
       <DependentUpon>Frm_HellowWorld.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ValidaSenha.resx">
+      <DependentUpon>Frm_ValidaSenha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Txt_ = new System.Windows.Forms.TextBox();
+            this.Txt_Input = new System.Windows.Forms.TextBox();
             this.Txt_Msg = new System.Windows.Forms.TextBox();
             this.Btn_Reset = new System.Windows.Forms.Button();
             this.Lbl_Minus = new System.Windows.Forms.Label();
@@ -37,12 +37,13 @@
             this.Lbl_Lower = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // Txt_
+            // Txt_Input
             // 
-            this.Txt_.Location = new System.Drawing.Point(8, 8);
-            this.Txt_.Name = "Txt_";
-            this.Txt_.Size = new System.Drawing.Size(100, 22);
-            this.Txt_.TabIndex = 0;
+            this.Txt_Input.Location = new System.Drawing.Point(8, 8);
+            this.Txt_Input.Name = "Txt_Input";
+            this.Txt_Input.Size = new System.Drawing.Size(100, 22);
+            this.Txt_Input.TabIndex = 0;
+            this.Txt_Input.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_Input_KeyDown);
             // 
             // Txt_Msg
             // 
@@ -62,6 +63,7 @@
             this.Btn_Reset.TabIndex = 2;
             this.Btn_Reset.Text = "Limpa";
             this.Btn_Reset.UseVisualStyleBackColor = true;
+            this.Btn_Reset.Click += new System.EventHandler(this.Btn_Reset_Click);
             // 
             // Lbl_Minus
             // 
@@ -108,7 +110,7 @@
             this.Controls.Add(this.Lbl_Minus);
             this.Controls.Add(this.Btn_Reset);
             this.Controls.Add(this.Txt_Msg);
-            this.Controls.Add(this.Txt_);
+            this.Controls.Add(this.Txt_Input);
             this.Name = "Frm_DemonstacaoKey";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Demonstação Key";
@@ -119,7 +121,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox Txt_;
+        private System.Windows.Forms.TextBox Txt_Input;
         private System.Windows.Forms.TextBox Txt_Msg;
         private System.Windows.Forms.Button Btn_Reset;
         private System.Windows.Forms.Label Lbl_Minus;
