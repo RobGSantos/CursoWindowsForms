@@ -30,15 +30,18 @@
         {
             this.Txt_Senha = new System.Windows.Forms.TextBox();
             this.Lbl_Resultado = new System.Windows.Forms.Label();
-            this.Btn_Result = new System.Windows.Forms.Button();
+            this.Btn_Limpa = new System.Windows.Forms.Button();
+            this.Btn_VerSenha = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Txt_Senha
             // 
             this.Txt_Senha.Location = new System.Drawing.Point(12, 45);
             this.Txt_Senha.Name = "Txt_Senha";
+            this.Txt_Senha.PasswordChar = '*';
             this.Txt_Senha.Size = new System.Drawing.Size(218, 22);
             this.Txt_Senha.TabIndex = 0;
+            this.Txt_Senha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_Senha_KeyDown);
             // 
             // Lbl_Resultado
             // 
@@ -49,21 +52,34 @@
             this.Lbl_Resultado.Size = new System.Drawing.Size(0, 29);
             this.Lbl_Resultado.TabIndex = 1;
             // 
-            // Btn_Result
+            // Btn_Limpa
             // 
-            this.Btn_Result.Location = new System.Drawing.Point(245, 42);
-            this.Btn_Result.Name = "Btn_Result";
-            this.Btn_Result.Size = new System.Drawing.Size(111, 23);
-            this.Btn_Result.TabIndex = 2;
-            this.Btn_Result.Text = "Limpa";
-            this.Btn_Result.UseVisualStyleBackColor = true;
+            this.Btn_Limpa.Location = new System.Drawing.Point(245, 42);
+            this.Btn_Limpa.Name = "Btn_Limpa";
+            this.Btn_Limpa.Size = new System.Drawing.Size(131, 23);
+            this.Btn_Limpa.TabIndex = 2;
+            this.Btn_Limpa.Text = "Limpa";
+            this.Btn_Limpa.UseVisualStyleBackColor = true;
+            this.Btn_Limpa.Click += new System.EventHandler(this.Btn_Limpa_Click);
+            // 
+            // Btn_VerSenha
+            // 
+            this.Btn_VerSenha.AutoSize = true;
+            this.Btn_VerSenha.Location = new System.Drawing.Point(245, 71);
+            this.Btn_VerSenha.Name = "Btn_VerSenha";
+            this.Btn_VerSenha.Size = new System.Drawing.Size(131, 26);
+            this.Btn_VerSenha.TabIndex = 3;
+            this.Btn_VerSenha.Text = "Ver Senha";
+            this.Btn_VerSenha.UseVisualStyleBackColor = true;
+            this.Btn_VerSenha.Click += new System.EventHandler(this.Btn_VerSenha_Click);
             // 
             // Frm_ValidaSenha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(366, 146);
-            this.Controls.Add(this.Btn_Result);
+            this.ClientSize = new System.Drawing.Size(385, 146);
+            this.Controls.Add(this.Btn_VerSenha);
+            this.Controls.Add(this.Btn_Limpa);
             this.Controls.Add(this.Lbl_Resultado);
             this.Controls.Add(this.Txt_Senha);
             this.Name = "Frm_ValidaSenha";
@@ -78,6 +94,7 @@
 
         private System.Windows.Forms.TextBox Txt_Senha;
         private System.Windows.Forms.Label Lbl_Resultado;
-        private System.Windows.Forms.Button Btn_Result;
+        private System.Windows.Forms.Button Btn_Limpa;
+        private System.Windows.Forms.Button Btn_VerSenha;
     }
 }
