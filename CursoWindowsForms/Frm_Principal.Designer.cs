@@ -1,6 +1,6 @@
 ﻿namespace CursoWindowsForms
 {
-    partial class Frm_Princial
+    partial class Frm_Principal
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Princial));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Principal));
             this.Btn_DemonstracaoKey = new System.Windows.Forms.Button();
             this.Btn_HelloWorld = new System.Windows.Forms.Button();
             this.Btn_Mascara = new System.Windows.Forms.Button();
