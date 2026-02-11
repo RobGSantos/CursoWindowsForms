@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_HellowWorld));
             this.Lbl_Titulo = new System.Windows.Forms.Label();
             this.Btn_Sair = new System.Windows.Forms.Button();
             this.Btn_ModificalLabel = new System.Windows.Forms.Button();
@@ -81,6 +82,7 @@
             this.Controls.Add(this.Btn_ModificalLabel);
             this.Controls.Add(this.Btn_Sair);
             this.Controls.Add(this.Lbl_Titulo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frm_HellowWorld";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hellow World";
