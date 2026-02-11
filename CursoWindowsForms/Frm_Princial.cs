@@ -16,5 +16,41 @@ namespace CursoWindowsForms
         {
             InitializeComponent();
         }
+
+        private void Btn_DemonstracaoKey_Click(object sender, EventArgs e)
+        {
+            Frm_DemonstacaoKey frm_DemonstacaoKey = new Frm_DemonstacaoKey();
+            frm_DemonstacaoKey.ShowDialog();    
+        }
+
+        private void Btn_HelloWorld_Click(object sender, EventArgs e)
+        {
+            Frm_HellowWorld frm_HellowWorld = new Frm_HellowWorld();
+            frm_HellowWorld.ShowDialog();
+        }
+
+        private void Btn_Mascara_Click(object sender, EventArgs e)
+        {
+            Frm_Mascara frm_mascara = new Frm_Mascara();
+            frm_mascara.ShowDialog();
+        }
+
+        private void Btn_ValidaCPF_Click(object sender, EventArgs e)
+        {
+            Frm_ValidaCPF frm_ValidaCPF = new Frm_ValidaCPF();
+            frm_ValidaCPF.ShowDialog();
+        }
+
+        private void Btn_ValidaCPF2_Click(object sender, EventArgs e)
+        {
+            Frm_ValidaCPF2 frm_ValidaCPF2 = new Frm_ValidaCPF2();
+            frm_ValidaCPF2.ShowDialog();
+        }
+
+        private void Btn_ValidaSenha_Click(object sender, EventArgs e)
+        {
+            Frm_ValidaSenha frm_ValidaSenha = new Frm_ValidaSenha();
+            frm_ValidaSenha.ShowDialog();
+        }
     }
 }

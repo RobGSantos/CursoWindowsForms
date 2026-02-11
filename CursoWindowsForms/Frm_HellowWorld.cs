@@ -13,7 +13,7 @@ namespace CursoWindowsForms
 
         private void Btn_Sair_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Close();
         }
 
         private void Btn_ModificalLabel_Click(object sender, EventArgs e)

@@ -44,6 +44,7 @@
             this.Btn_DemonstracaoKey.TabIndex = 0;
             this.Btn_DemonstracaoKey.Text = "Demonstração Key";
             this.Btn_DemonstracaoKey.UseVisualStyleBackColor = true;
+            this.Btn_DemonstracaoKey.Click += new System.EventHandler(this.Btn_DemonstracaoKey_Click);
             // 
             // Btn_HelloWorld
             // 
@@ -53,6 +54,7 @@
             this.Btn_HelloWorld.TabIndex = 1;
             this.Btn_HelloWorld.Text = "Hello World";
             this.Btn_HelloWorld.UseVisualStyleBackColor = true;
+            this.Btn_HelloWorld.Click += new System.EventHandler(this.Btn_HelloWorld_Click);
             // 
             // Btn_Mascara
             // 
@@ -62,6 +64,7 @@
             this.Btn_Mascara.TabIndex = 2;
             this.Btn_Mascara.Text = "Máscara";
             this.Btn_Mascara.UseVisualStyleBackColor = true;
+            this.Btn_Mascara.Click += new System.EventHandler(this.Btn_Mascara_Click);
             // 
             // Btn_ValidaSenha
             // 
@@ -71,6 +74,7 @@
             this.Btn_ValidaSenha.TabIndex = 5;
             this.Btn_ValidaSenha.Text = "Valida Senha";
             this.Btn_ValidaSenha.UseVisualStyleBackColor = true;
+            this.Btn_ValidaSenha.Click += new System.EventHandler(this.Btn_ValidaSenha_Click);
             // 
             // Btn_ValidaCPF2
             // 
@@ -80,6 +84,7 @@
             this.Btn_ValidaCPF2.TabIndex = 4;
             this.Btn_ValidaCPF2.Text = "Valida CPF2";
             this.Btn_ValidaCPF2.UseVisualStyleBackColor = true;
+            this.Btn_ValidaCPF2.Click += new System.EventHandler(this.Btn_ValidaCPF2_Click);
             // 
             // Btn_ValidaCPF
             // 
@@ -89,6 +94,7 @@
             this.Btn_ValidaCPF.TabIndex = 3;
             this.Btn_ValidaCPF.Text = "Valida CPF";
             this.Btn_ValidaCPF.UseVisualStyleBackColor = true;
+            this.Btn_ValidaCPF.Click += new System.EventHandler(this.Btn_ValidaCPF_Click);
             // 
             // Frm_Princial
             // 
