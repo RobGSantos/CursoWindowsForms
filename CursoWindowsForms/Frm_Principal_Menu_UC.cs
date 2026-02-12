@@ -28,6 +28,8 @@ namespace CursoWindowsForms
             ControleDemonstracaoKey++;
             Frm_DemonstracaoKey_UC U = new Frm_DemonstracaoKey_UC();
 
+            U.Dock = DockStyle.Fill;
+
             TabPage TB = new TabPage
             {
                 Name = "UC_DemonstracaoKey",
@@ -45,6 +47,8 @@ namespace CursoWindowsForms
             ControleHelloWorld ++;
             // Formulario Tipo UserControl
             Frm_HelloWorld_UC U = new Frm_HelloWorld_UC();
+
+            U.Dock = DockStyle.Fill;
 
             // TabPage
             TabPage TB = new TabPage
@@ -70,6 +74,8 @@ namespace CursoWindowsForms
             ControleMascara++;
             Frm_Mascara_UC U = new Frm_Mascara_UC();
 
+            U.Dock = DockStyle.Fill;
+
             TabPage TB = new TabPage
             {
                 Name = "UC_Mascara",
@@ -85,6 +91,7 @@ namespace CursoWindowsForms
         {
             ControleValidaCPF++;
             Frm_ValidaCPF_UC U = new Frm_ValidaCPF_UC();
+            U.Dock = DockStyle.Fill;
 
             TabPage TB = new TabPage
             {
@@ -102,6 +109,8 @@ namespace CursoWindowsForms
             ControleValidaCPF2++;
             Frm_ValidaCPF2_UC U = new Frm_ValidaCPF2_UC();
 
+            U.Dock = DockStyle.Fill;
+
             TabPage TB = new TabPage
             {
                 Name = "UC_ValidaCPF2",
@@ -117,6 +126,8 @@ namespace CursoWindowsForms
         {
             ControleValidaSenha++;
             Frm_ValidaSenha_UC U = new Frm_ValidaSenha_UC();
+
+            U.Dock = DockStyle.Fill;
 
             TabPage TB = new TabPage
             {

@@ -55,7 +55,7 @@
             this.windowsToolStripMenuItem});
             this.Mnu_Principal.Location = new System.Drawing.Point(0, 0);
             this.Mnu_Principal.Name = "Mnu_Principal";
-            this.Mnu_Principal.Size = new System.Drawing.Size(800, 28);
+            this.Mnu_Principal.Size = new System.Drawing.Size(800, 30);
             this.Mnu_Principal.TabIndex = 0;
             this.Mnu_Principal.Text = "menuStrip1";
             // 
@@ -66,7 +66,7 @@
             this.apagarAbaToolStripMenuItem,
             this.sairToolStripMenuItem});
             this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
-            this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
+            this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(75, 26);
             this.arquivoToolStripMenuItem.Text = "Arquivo";
             // 
             // novoToolStripMenuItem
@@ -79,7 +79,7 @@
             this.validaCPF2ToolStripMenuItem,
             this.valídaSenhaToolStripMenuItem});
             this.novoToolStripMenuItem.Name = "novoToolStripMenuItem";
-            this.novoToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.novoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.novoToolStripMenuItem.Text = "Novo";
             // 
             // demonstraçãoKeyToolStripMenuItem
@@ -139,31 +139,31 @@
             // apagarAbaToolStripMenuItem
             // 
             this.apagarAbaToolStripMenuItem.Name = "apagarAbaToolStripMenuItem";
-            this.apagarAbaToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.apagarAbaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.apagarAbaToolStripMenuItem.Text = "Apagar Aba";
             this.apagarAbaToolStripMenuItem.Click += new System.EventHandler(this.apagarAbaToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // windowsToolStripMenuItem
             // 
             this.windowsToolStripMenuItem.Name = "windowsToolStripMenuItem";
-            this.windowsToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
+            this.windowsToolStripMenuItem.Size = new System.Drawing.Size(84, 26);
             this.windowsToolStripMenuItem.Text = "Windows";
             // 
             // Tbc_Aplicacoes
             // 
             this.Tbc_Aplicacoes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Tbc_Aplicacoes.ImageList = this.Iml_Imagens;
-            this.Tbc_Aplicacoes.Location = new System.Drawing.Point(0, 28);
+            this.Tbc_Aplicacoes.Location = new System.Drawing.Point(0, 30);
             this.Tbc_Aplicacoes.Name = "Tbc_Aplicacoes";
             this.Tbc_Aplicacoes.SelectedIndex = 0;
-            this.Tbc_Aplicacoes.Size = new System.Drawing.Size(800, 422);
+            this.Tbc_Aplicacoes.Size = new System.Drawing.Size(800, 420);
             this.Tbc_Aplicacoes.TabIndex = 1;
             this.Tbc_Aplicacoes.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Tbc_Aplicacoes_MouseClick);
             // 

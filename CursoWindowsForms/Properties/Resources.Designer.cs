@@ -161,6 +161,26 @@ namespace CursoWindowsForms.Properties {
         }
         
         /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Byte[].
+        /// </summary>
+        internal static byte[] Ponto_de_Interrogacao_Icone {
+            get {
+                object obj = ResourceManager.GetObject("Ponto_de_Interrogacao_Icone", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ponto_de_Interrogacao_Imagem {
+            get {
+                object obj = ResourceManager.GetObject("Ponto_de_Interrogacao_Imagem", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap ValidaCPF_Imagem {
