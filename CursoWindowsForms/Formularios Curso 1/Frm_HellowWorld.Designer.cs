@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_HellowWorld));
             this.Lbl_Titulo = new System.Windows.Forms.Label();
             this.Btn_Sair = new System.Windows.Forms.Button();
             this.Btn_ModificalLabel = new System.Windows.Forms.Button();
@@ -47,11 +46,12 @@
             // 
             // Btn_Sair
             // 
+            this.Btn_Sair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Sair.Location = new System.Drawing.Point(248, 257);
             this.Btn_Sair.Name = "Btn_Sair";
             this.Btn_Sair.Size = new System.Drawing.Size(150, 23);
             this.Btn_Sair.TabIndex = 1;
-            this.Btn_Sair.Text = "Fechar a aplicação";
+            this.Btn_Sair.Text = "Fechar o formulário";
             this.Btn_Sair.UseVisualStyleBackColor = true;
             this.Btn_Sair.Click += new System.EventHandler(this.Btn_Sair_Click);
             // 
@@ -67,6 +67,8 @@
             // 
             // Txt_ConteudoLabel
             // 
+            this.Txt_ConteudoLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Txt_ConteudoLabel.Location = new System.Drawing.Point(34, 104);
             this.Txt_ConteudoLabel.Name = "Txt_ConteudoLabel";
             this.Txt_ConteudoLabel.Size = new System.Drawing.Size(321, 22);
@@ -82,7 +84,6 @@
             this.Controls.Add(this.Btn_ModificalLabel);
             this.Controls.Add(this.Btn_Sair);
             this.Controls.Add(this.Lbl_Titulo);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frm_HellowWorld";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hellow World";

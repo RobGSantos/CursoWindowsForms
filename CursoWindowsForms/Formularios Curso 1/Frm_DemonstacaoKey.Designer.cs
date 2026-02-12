@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_DemonstacaoKey));
             this.Txt_Input = new System.Windows.Forms.TextBox();
             this.Txt_Msg = new System.Windows.Forms.TextBox();
             this.Btn_Reset = new System.Windows.Forms.Button();
@@ -40,6 +39,8 @@
             // 
             // Txt_Input
             // 
+            this.Txt_Input.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Txt_Input.Location = new System.Drawing.Point(8, 8);
             this.Txt_Input.Name = "Txt_Input";
             this.Txt_Input.Size = new System.Drawing.Size(100, 22);
@@ -48,6 +49,9 @@
             // 
             // Txt_Msg
             // 
+            this.Txt_Msg.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Txt_Msg.Location = new System.Drawing.Point(8, 40);
             this.Txt_Msg.Multiline = true;
             this.Txt_Msg.Name = "Txt_Msg";
@@ -58,6 +62,7 @@
             // 
             // Btn_Reset
             // 
+            this.Btn_Reset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Reset.Location = new System.Drawing.Point(328, 8);
             this.Btn_Reset.Name = "Btn_Reset";
             this.Btn_Reset.Size = new System.Drawing.Size(75, 28);
@@ -68,6 +73,7 @@
             // 
             // Lbl_Minus
             // 
+            this.Lbl_Minus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Lbl_Minus.AutoSize = true;
             this.Lbl_Minus.Location = new System.Drawing.Point(320, 104);
             this.Lbl_Minus.Name = "Lbl_Minus";
@@ -77,6 +83,7 @@
             // 
             // Lbl_Maius
             // 
+            this.Lbl_Maius.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Lbl_Maius.AutoSize = true;
             this.Lbl_Maius.Location = new System.Drawing.Point(320, 56);
             this.Lbl_Maius.Name = "Lbl_Maius";
@@ -86,6 +93,7 @@
             // 
             // Lbl_Upper
             // 
+            this.Lbl_Upper.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Lbl_Upper.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Lbl_Upper.Location = new System.Drawing.Point(368, 56);
             this.Lbl_Upper.Name = "Lbl_Upper";
@@ -94,6 +102,7 @@
             // 
             // Lbl_Lower
             // 
+            this.Lbl_Lower.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Lbl_Lower.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Lbl_Lower.Location = new System.Drawing.Point(368, 104);
             this.Lbl_Lower.Name = "Lbl_Lower";
@@ -112,7 +121,6 @@
             this.Controls.Add(this.Btn_Reset);
             this.Controls.Add(this.Txt_Msg);
             this.Controls.Add(this.Txt_Input);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frm_DemonstacaoKey";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Demonstação Key";
