@@ -25,8 +25,21 @@ namespace CursoWindowsForms
 
         private void helloWorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_HellowWorld world = new Frm_HellowWorld();
-            world.ShowDialog();
+            // Formulario Tipo UserControl
+            Frm_HelloWorld_UC U = new Frm_HelloWorld_UC();
+
+            // TabPage
+            TabPage TB = new TabPage
+            {
+                Name = "TP_HelloWorld",
+                Text = "Hello World"
+            };
+            //Adiciona na TabPage o Formulario UserControl
+            TB.Controls.Add(U);
+
+            //Adiciona a TabPage no TabControls
+            Tbc_Aplicacoes.TabPages.Add(TB);
+            
         }
 
         private void máscaraToolStripMenuItem_Click(object sender, EventArgs e)
@@ -56,11 +69,6 @@ namespace CursoWindowsForms
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void Frm_Principal_Menu_UC_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

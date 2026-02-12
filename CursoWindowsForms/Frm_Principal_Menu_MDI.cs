@@ -26,7 +26,7 @@ namespace CursoWindowsForms
 
         private void HelloWorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_HellowWorld f = new Frm_HellowWorld();
+            Frm_HelloWorld f = new Frm_HelloWorld();
             f.MdiParent = this;
             f.Show();
         }

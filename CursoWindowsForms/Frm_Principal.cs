@@ -25,7 +25,7 @@ namespace CursoWindowsForms
 
         private void Btn_HelloWorld_Click(object sender, EventArgs e)
         {
-            Frm_HellowWorld frm_HellowWorld = new Frm_HellowWorld();
+            Frm_HelloWorld frm_HellowWorld = new Frm_HelloWorld();
             frm_HellowWorld.ShowDialog();
         }
 

@@ -1,6 +1,6 @@
 ﻿namespace CursoWindowsForms
 {
-    partial class Frm_HellowWorld
+    partial class Frm_HelloWorld
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -74,7 +74,7 @@
             this.Txt_ConteudoLabel.Size = new System.Drawing.Size(321, 22);
             this.Txt_ConteudoLabel.TabIndex = 3;
             // 
-            // Frm_HellowWorld
+            // Frm_HelloWorld
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -84,7 +84,7 @@
             this.Controls.Add(this.Btn_ModificalLabel);
             this.Controls.Add(this.Btn_Sair);
             this.Controls.Add(this.Lbl_Titulo);
-            this.Name = "Frm_HellowWorld";
+            this.Name = "Frm_HelloWorld";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hellow World";
             this.ResumeLayout(false);

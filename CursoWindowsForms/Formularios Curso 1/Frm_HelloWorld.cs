@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace CursoWindowsForms
 {
-    public partial class Frm_HellowWorld : Form
+    public partial class Frm_HelloWorld : Form
     {
-        public Frm_HellowWorld()
+        public Frm_HelloWorld()
         {
             InitializeComponent();
         }
