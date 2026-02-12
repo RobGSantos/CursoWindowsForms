@@ -13,6 +13,9 @@ namespace CursoWindowsForms
     public partial class Frm_Principal_Menu_UC : Form
     {
         int ControleHelloWorld = 0;
+        int ControleDemonstracaoKey = 0;
+        int ControleMascara = 0;
+        int ControleValidaCPF = 0;
         public Frm_Principal_Menu_UC()
         {
             InitializeComponent();
@@ -20,8 +23,19 @@ namespace CursoWindowsForms
 
         private void demonstraçãoKeyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_DemonstacaoKey f = new Frm_DemonstacaoKey();
-            f.ShowDialog();
+            ControleDemonstracaoKey++;
+            Frm_DemonstracaoKey_UC U = new Frm_DemonstracaoKey_UC();
+
+            TabPage TB = new TabPage
+            {
+                Name = "UC_DemonstracaoKey",
+                Text = $"Demonstração Key {ControleDemonstracaoKey}"
+            };
+
+            TB.Controls.Add(U);
+            TB.ImageIndex = 0;
+            Tbc_Aplicacoes.TabPages.Add(TB);
+
         }
 
         private void helloWorToolStripMenuItem_Click(object sender, EventArgs e)
@@ -51,14 +65,34 @@ namespace CursoWindowsForms
 
         private void máscaraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_Mascara f = new Frm_Mascara();
-            f.ShowDialog();
+            ControleMascara++;
+            Frm_Mascara_UC U = new Frm_Mascara_UC();
+
+            TabPage TB = new TabPage
+            {
+                Name = "UC_Mascara",
+                Text = $"Máscara {ControleMascara}"
+            };
+
+            TB.Controls.Add(U);
+            TB.ImageIndex = 2;
+            Tbc_Aplicacoes.TabPages.Add(TB);
         }
 
         private void validaCPFToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_ValidaCPF2 f = new Frm_ValidaCPF2();
-            f.ShowDialog();
+            ControleValidaCPF++;
+            Frm_ValidaCPF_UC U = new Frm_ValidaCPF_UC();
+
+            TabPage TB = new TabPage
+            {
+                Name = "UC_ValidaCPF",
+                Text = $"Valída CPF {ControleValidaCPF}"
+            };
+
+            TB.Controls.Add(U);
+            TB.ImageIndex = 3;
+            Tbc_Aplicacoes.TabPages.Add(TB);
         }
 
         private void validaCPF2ToolStripMenuItem_Click(object sender, EventArgs e)
