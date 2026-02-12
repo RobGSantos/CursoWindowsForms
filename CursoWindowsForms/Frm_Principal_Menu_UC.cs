@@ -16,6 +16,8 @@ namespace CursoWindowsForms
         int ControleDemonstracaoKey = 0;
         int ControleMascara = 0;
         int ControleValidaCPF = 0;
+        int ControleValidaCPF2 = 0;
+        int ControleValidaSenha = 0;
         public Frm_Principal_Menu_UC()
         {
             InitializeComponent();
@@ -97,14 +99,34 @@ namespace CursoWindowsForms
 
         private void validaCPF2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_ValidaCPF2 f = new Frm_ValidaCPF2();
-            f.ShowDialog();
+            ControleValidaCPF2++;
+            Frm_ValidaCPF2_UC U = new Frm_ValidaCPF2_UC();
+
+            TabPage TB = new TabPage
+            {
+                Name = "UC_ValidaCPF2",
+                Text = $"Valída CPF2 {ControleValidaCPF2}"
+            };
+
+            TB.Controls.Add(U);
+            TB.ImageIndex = 4;
+            Tbc_Aplicacoes.TabPages.Add(TB);
         }
 
         private void valídaSenhaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_ValidaSenha f = new Frm_ValidaSenha();
-            f.ShowDialog();
+            ControleValidaSenha++;
+            Frm_ValidaSenha_UC U = new Frm_ValidaSenha_UC();
+
+            TabPage TB = new TabPage
+            {
+                Name = "UC_ValidaSenha",
+                Text = $"Valída Senha {ControleValidaSenha}"
+            };
+
+            TB.Controls.Add(U);
+            TB.ImageIndex = 5;
+            Tbc_Aplicacoes.TabPages.Add(TB);
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
@@ -116,6 +138,15 @@ namespace CursoWindowsForms
         {
             if(!(Tbc_Aplicacoes.SelectedTab == null))
             Tbc_Aplicacoes.TabPages.Remove(Tbc_Aplicacoes.SelectedTab);
+        }
+
+        private void Tbc_Aplicacoes_MouseClick(object sender, MouseEventArgs e)
+        {
+            if(e.Button == MouseButtons.Middle)
+            {
+                if(!(Tbc_Aplicacoes.SelectedTab == null))
+                    Tbc_Aplicacoes.TabPages.Remove(Tbc_Aplicacoes.SelectedTab);
+            }
         }
     }
 }
