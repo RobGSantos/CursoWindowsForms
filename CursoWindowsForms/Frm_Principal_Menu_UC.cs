@@ -243,5 +243,96 @@ namespace CursoWindowsForms
 
             
         }
+
+        private void Tbc_Aplicacoes_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (!(e.Button == MouseButtons.Right)) return;
+
+            //var posicaoX = e.X;
+            //var posicaoY = e.Y;
+
+            //MessageBox.Show($"Cliquei no botão {e.Button} na coordenada {posicaoX},{posicaoY}");
+
+            var ContextMenu = new ContextMenuStrip();
+            //var vToolTip001 = new ToolStripMenuItem();
+            //vToolTip001.Text = "Item do Menu 1";
+
+            //var vToolTip002 = new ToolStripMenuItem();
+            //vToolTip002.Text = "Item do Menu 2";
+            var vToolTip001 = DesenhaItemMenu("Apagar a Aba", "DeleteTab");
+            var vToolTip002 = DesenhaItemMenu("Apagar todas à Esquerda", "DeleteLeft");
+            var vToolTip003 = DesenhaItemMenu("Apagar todas à Direita", "DeleteRight");
+            var vToolTip004 = DesenhaItemMenu("Apagar todas exceto esta", "DeleteAll");
+
+            vToolTip001.Click += new EventHandler(vToolTip001_Click);
+            vToolTip002.Click += new EventHandler(vToolTip002_Click);
+            vToolTip003.Click += new EventHandler(vToolTip003_Click);
+            vToolTip004.Click += new EventHandler(vToolTip004_Click);
+
+            ContextMenu.Items.Add(vToolTip001);
+            ContextMenu.Items.Add(vToolTip002);
+            ContextMenu.Items.Add(vToolTip003);
+            ContextMenu.Items.Add(vToolTip004);
+
+
+            ContextMenu.Show(this, e.Location);
+
+            void vToolTip001_Click(object sender1, EventArgs e1)
+            {
+                if (!(Tbc_Aplicacoes.SelectedTab == null))
+                    Tbc_Aplicacoes.TabPages.Remove(Tbc_Aplicacoes.SelectedTab);
+            }
+
+            void vToolTip002_Click(object sender1, EventArgs e1)
+            {
+                if (Tbc_Aplicacoes.SelectedTab == null) return;
+
+                for (int i = Tbc_Aplicacoes.SelectedIndex - 1; i >= 0  ; i--)
+                {
+                    Tbc_Aplicacoes.TabPages.RemoveAt(i);
+                }
+                
+            }
+
+            void vToolTip003_Click(object sender1, EventArgs e1)
+            {
+                if (Tbc_Aplicacoes.SelectedTab == null) return;
+                for (int i = Tbc_Aplicacoes.TabCount - 1 ; i >= Tbc_Aplicacoes.SelectedIndex + 1; i--)
+                {
+                    Tbc_Aplicacoes.TabPages.Remove(Tbc_Aplicacoes.TabPages[i]);
+
+                }
+            }
+
+            void vToolTip004_Click(object sender1, EventArgs e1)
+            {
+                if (Tbc_Aplicacoes.SelectedTab == null) return;
+                for (int i = Tbc_Aplicacoes.SelectedIndex - 1; i >= 0; i--)
+                {
+                    Tbc_Aplicacoes.TabPages.RemoveAt(i);
+                }
+                for (int i = Tbc_Aplicacoes.TabCount - 1; i >= Tbc_Aplicacoes.SelectedIndex + 1; i--)
+                {
+                    Tbc_Aplicacoes.TabPages.Remove(Tbc_Aplicacoes.TabPages[i]);
+
+                }
+
+            }
+
+            ToolStripMenuItem DesenhaItemMenu(string text, string nomeImagem)
+            {
+                Image MyImage = (Image)Properties.Resources.ResourceManager.GetObject(nomeImagem);
+                var vToolTip = new ToolStripMenuItem()
+                {
+                    Text = text,
+                    Image = MyImage
+
+
+                };
+
+                return vToolTip;
+            }
+        }
+
     }
 }

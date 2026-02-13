@@ -202,6 +202,7 @@
             this.Tbc_Aplicacoes.Size = new System.Drawing.Size(800, 422);
             this.Tbc_Aplicacoes.TabIndex = 1;
             this.Tbc_Aplicacoes.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Tbc_Aplicacoes_MouseClick);
+            this.Tbc_Aplicacoes.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Tbc_Aplicacoes_MouseDown);
             // 
             // Iml_Imagens
             // 
