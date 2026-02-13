@@ -115,6 +115,12 @@
     <Compile Include="Formularios Curso 2\Frm_Mascara_UC.Designer.cs">
       <DependentUpon>Frm_Mascara_UC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_CadastroCliente_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Frm_CadastroCliente_UC.Designer.cs">
+      <DependentUpon>Frm_CadastroCliente_UC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_MenuFlutuante.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios Curso 2\Frm_Mascara_UC.resx">
       <DependentUpon>Frm_Mascara_UC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_CadastroCliente_UC.resx">
+      <DependentUpon>Frm_CadastroCliente_UC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_MenuFlutuante.resx">
       <DependentUpon>Frm_MenuFlutuante.cs</DependentUpon>
