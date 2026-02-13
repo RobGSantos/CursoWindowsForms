@@ -9,6 +9,12 @@ namespace CursoWindowsFormsBibliotecas
 {
     public class Cls_Uteis
     {
+        public static bool ValidaSenhaLogin(string senha)
+        {
+            if(!senha.Equals("curso")) return false;
+
+            return true;
+        }
         public static bool Valida(string cpf)
         {
             int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };

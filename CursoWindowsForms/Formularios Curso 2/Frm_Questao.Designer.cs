@@ -32,12 +32,13 @@
             this.Lbl_Questao = new System.Windows.Forms.Label();
             this.Btn_Ok = new System.Windows.Forms.Button();
             this.Btn_Cancel = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.Pic_Imagem = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.Pic_Imagem)).BeginInit();
             this.SuspendLayout();
             // 
             // Lbl_Questao
             // 
+            this.Lbl_Questao.AutoEllipsis = true;
             this.Lbl_Questao.AutoSize = true;
             this.Lbl_Questao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.Lbl_Questao.Location = new System.Drawing.Point(39, 9);
@@ -48,6 +49,7 @@
             // 
             // Btn_Ok
             // 
+            this.Btn_Ok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Ok.Location = new System.Drawing.Point(221, 58);
             this.Btn_Ok.Name = "Btn_Ok";
             this.Btn_Ok.Size = new System.Drawing.Size(115, 23);
@@ -58,6 +60,7 @@
             // 
             // Btn_Cancel
             // 
+            this.Btn_Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_Cancel.Location = new System.Drawing.Point(221, 87);
             this.Btn_Cancel.Name = "Btn_Cancel";
             this.Btn_Cancel.Size = new System.Drawing.Size(117, 23);
@@ -66,22 +69,22 @@
             this.Btn_Cancel.UseVisualStyleBackColor = true;
             this.Btn_Cancel.Click += new System.EventHandler(this.Btn_Cancel_Click);
             // 
-            // pictureBox1
+            // Pic_Imagem
             // 
-            this.pictureBox1.Image = global::CursoWindowsForms.Properties.Resources.Ponto_de_Interrogacao_Imagem;
-            this.pictureBox1.Location = new System.Drawing.Point(44, 55);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(129, 94);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.Pic_Imagem.Image = global::CursoWindowsForms.Properties.Resources.Ponto_de_Interrogacao_Imagem;
+            this.Pic_Imagem.Location = new System.Drawing.Point(44, 55);
+            this.Pic_Imagem.Name = "Pic_Imagem";
+            this.Pic_Imagem.Size = new System.Drawing.Size(129, 94);
+            this.Pic_Imagem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.Pic_Imagem.TabIndex = 3;
+            this.Pic_Imagem.TabStop = false;
             // 
             // Frm_Questao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(363, 161);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.Pic_Imagem);
             this.Controls.Add(this.Btn_Cancel);
             this.Controls.Add(this.Btn_Ok);
             this.Controls.Add(this.Lbl_Questao);
@@ -92,7 +95,7 @@
             this.Name = "Frm_Questao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Questão";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pic_Imagem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,6 +106,6 @@
         private System.Windows.Forms.Label Lbl_Questao;
         private System.Windows.Forms.Button Btn_Ok;
         private System.Windows.Forms.Button Btn_Cancel;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox Pic_Imagem;
     }
 }

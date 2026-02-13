@@ -15,6 +15,12 @@ namespace CursoWindowsForms
         public Frm_Questao(string nomeImagem, string mensagem)
         {
             InitializeComponent();
+            Image MyImage = (Image)Properties.Resources.ResourceManager.GetObject(nomeImagem);
+            Pic_Imagem.Image = MyImage;
+            Lbl_Questao.Text = mensagem;
+            Pic_Imagem.SizeMode = PictureBoxSizeMode.StretchImage;
+            Width = Lbl_Questao.Width + 50;
+
         }
 
         private void Btn_Ok_Click(object sender, EventArgs e)

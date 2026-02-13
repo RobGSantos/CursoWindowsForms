@@ -63,6 +63,16 @@ namespace CursoWindowsForms.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Chave {
+            get {
+                object obj = ResourceManager.GetObject("Chave", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DemonstracaoKey_Imagem {
             get {
                 object obj = ResourceManager.GetObject("DemonstracaoKey_Imagem", resourceCulture);
