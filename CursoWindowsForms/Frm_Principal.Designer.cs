@@ -114,6 +114,7 @@
             this.Controls.Add(this.Btn_Mascara);
             this.Controls.Add(this.Btn_HelloWorld);
             this.Controls.Add(this.Btn_DemonstracaoKey);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frm_Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Princial";
