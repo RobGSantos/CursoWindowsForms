@@ -52,8 +52,8 @@
             this.Txt_Profissao = new System.Windows.Forms.TextBox();
             this.Lbl_RendaFamiliar = new System.Windows.Forms.Label();
             this.Txt_RendaFamiliar = new System.Windows.Forms.TextBox();
-            this.Txt_NomeMae = new System.Windows.Forms.TextBox();
             this.Lbl_NomeMae = new System.Windows.Forms.Label();
+            this.Txt_NomeMae = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Lbl_CPF
@@ -282,32 +282,30 @@
             this.Txt_RendaFamiliar.Size = new System.Drawing.Size(247, 20);
             this.Txt_RendaFamiliar.TabIndex = 1;
             // 
+            // Lbl_NomeMae
+            // 
+            this.Lbl_NomeMae.AutoSize = true;
+            this.Lbl_NomeMae.Location = new System.Drawing.Point(8, 108);
+            this.Lbl_NomeMae.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Lbl_NomeMae.Name = "Lbl_NomeMae";
+            this.Lbl_NomeMae.Size = new System.Drawing.Size(35, 13);
+            this.Lbl_NomeMae.TabIndex = 0;
+            this.Lbl_NomeMae.Text = "label1";
+            // 
             // Txt_NomeMae
             // 
             this.Txt_NomeMae.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Txt_NomeMae.Location = new System.Drawing.Point(8, 122);
+            this.Txt_NomeMae.Location = new System.Drawing.Point(8, 121);
             this.Txt_NomeMae.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_NomeMae.Name = "Txt_NomeMae";
             this.Txt_NomeMae.Size = new System.Drawing.Size(591, 20);
-            this.Txt_NomeMae.TabIndex = 3;
-            // 
-            // Lbl_NomeMae
-            // 
-            this.Lbl_NomeMae.AutoSize = true;
-            this.Lbl_NomeMae.Location = new System.Drawing.Point(8, 109);
-            this.Lbl_NomeMae.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Lbl_NomeMae.Name = "Lbl_NomeMae";
-            this.Lbl_NomeMae.Size = new System.Drawing.Size(35, 13);
-            this.Lbl_NomeMae.TabIndex = 2;
-            this.Lbl_NomeMae.Text = "label1";
+            this.Txt_NomeMae.TabIndex = 1;
             // 
             // Frm_CadastroCliente_UC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.Txt_NomeMae);
-            this.Controls.Add(this.Lbl_NomeMae);
             this.Controls.Add(this.Txt_Estado);
             this.Controls.Add(this.Txt_Profissao);
             this.Controls.Add(this.Txt_Bairro);
@@ -317,6 +315,7 @@
             this.Controls.Add(this.Txt_Logradouro);
             this.Controls.Add(this.Txt_CEP);
             this.Controls.Add(this.Txt_Genero);
+            this.Controls.Add(this.Txt_NomeMae);
             this.Controls.Add(this.Txt_NomePai);
             this.Controls.Add(this.Txt_NomeCliente);
             this.Controls.Add(this.Txt_CPF);
@@ -328,6 +327,7 @@
             this.Controls.Add(this.Lbl_Complemento);
             this.Controls.Add(this.Lbl_Logradouro);
             this.Controls.Add(this.Lbl_CEP);
+            this.Controls.Add(this.Lbl_NomeMae);
             this.Controls.Add(this.Lbl_Genero);
             this.Controls.Add(this.Lbl_NomePai);
             this.Controls.Add(this.Lbl_NomeCliente);
@@ -366,7 +366,7 @@
         private System.Windows.Forms.TextBox Txt_Profissao;
         private System.Windows.Forms.Label Lbl_RendaFamiliar;
         private System.Windows.Forms.TextBox Txt_RendaFamiliar;
-        private System.Windows.Forms.TextBox Txt_NomeMae;
         private System.Windows.Forms.Label Lbl_NomeMae;
+        private System.Windows.Forms.TextBox Txt_NomeMae;
     }
 }
