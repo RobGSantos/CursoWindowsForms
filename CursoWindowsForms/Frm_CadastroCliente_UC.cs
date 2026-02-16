@@ -18,7 +18,7 @@ namespace CursoWindowsForms
             Lbl_Bairro.Text = "Bairro";
             Lbl_CEP.Text = "CEP";
             Lbl_Complemento.Text = "Complemento";
-            Lbl_CPF.Text = "CPF";
+            Lbl_NumeroCliente.Text = "CPF";
             Lbl_Estado.Text = "Estado";
             Lbl_Genero.Text = "Genero";
             Lbl_Logradouro.Text = "Logradouro";
