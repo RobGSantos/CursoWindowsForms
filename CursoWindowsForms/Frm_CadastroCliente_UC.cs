@@ -15,6 +15,10 @@ namespace CursoWindowsForms
         public Frm_CadastroCliente_UC()
         {
             InitializeComponent();
+            Grp_Codigo.Text = "Código";
+            Grp_DadosPessoais.Text = "Dados Pessoais";
+            Grp_Endereco.Text = "Endereço";
+            Grp_Outros.Text = "Outros";
             Lbl_Bairro.Text = "Bairro";
             Lbl_CEP.Text = "CEP";
             Lbl_Complemento.Text = "Complemento";
