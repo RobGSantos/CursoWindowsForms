@@ -68,6 +68,11 @@ namespace CursoWindowsForms
             Cmb_Estados.Items.Add("Sergipe(SE)");
             Cmb_Estados.Items.Add("Tocantins(TO)");
 
+            Tls_Principal.Items[0].ToolTipText = "Incluir na Base de dados um novo cliente";
+            Tls_Principal.Items[1].ToolTipText = "Capturar um cliente já cadastrado na base de dados";
+            Tls_Principal.Items[2].ToolTipText = "Atualize o cliente já existente";
+            Tls_Principal.Items[3].ToolTipText = "Apaga o cliente selecionado";
+            Tls_Principal.Items[4].ToolTipText = "Limpa dados da tela de entrada de dados";
 
         }
 
@@ -77,6 +82,29 @@ namespace CursoWindowsForms
             Lbl_NomePai.Enabled = !Chk_TemPai.Checked;
         }
 
-   
+        private void novoToolStripButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Efetuei um clique sobre o botão NOVO");
+        }
+
+        private void abrirToolStripButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Efetuei um clique sobre o botão ABRIR");
+        }
+
+        private void salvarToolStripButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Efetuei um clique sobre o botão SALVAR");
+        }
+
+        private void ApagaStripButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Efetuei um clique sobre o botão EXCLUIR");
+        }
+
+        private void LimpaStripButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Efetuei um clique sobre o botão LIMPAR");
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_CadastroCliente_UC));
             this.Lbl_NumeroCliente = new System.Windows.Forms.Label();
             this.Txt_Codigo = new System.Windows.Forms.TextBox();
             this.Lbl_NomeCliente = new System.Windows.Forms.Label();
@@ -67,12 +68,19 @@
             this.Txt_Cidade = new System.Windows.Forms.TextBox();
             this.Lbl_Cidade = new System.Windows.Forms.Label();
             this.Grp_Outros = new System.Windows.Forms.GroupBox();
+            this.Tls_Principal = new System.Windows.Forms.ToolStrip();
+            this.novoToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.abrirToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.salvarToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.ApagaStripButton = new System.Windows.Forms.ToolStripButton();
+            this.LimpaStripButton = new System.Windows.Forms.ToolStripButton();
             this.Grp_Codigo.SuspendLayout();
             this.Grp_DadosPessoais.SuspendLayout();
             this.Grp_Genero.SuspendLayout();
             this.Grp_TemPai.SuspendLayout();
             this.Grp_Endereco.SuspendLayout();
             this.Grp_Outros.SuspendLayout();
+            this.Tls_Principal.SuspendLayout();
             this.SuspendLayout();
             // 
             // Lbl_NumeroCliente
@@ -304,7 +312,7 @@
             // 
             this.Grp_Codigo.Controls.Add(this.Txt_Codigo);
             this.Grp_Codigo.Controls.Add(this.Lbl_NumeroCliente);
-            this.Grp_Codigo.Location = new System.Drawing.Point(12, 7);
+            this.Grp_Codigo.Location = new System.Drawing.Point(3, 42);
             this.Grp_Codigo.Name = "Grp_Codigo";
             this.Grp_Codigo.Size = new System.Drawing.Size(301, 71);
             this.Grp_Codigo.TabIndex = 0;
@@ -323,7 +331,7 @@
             this.Grp_DadosPessoais.Controls.Add(this.Lbl_NomePai);
             this.Grp_DadosPessoais.Controls.Add(this.Txt_CPF);
             this.Grp_DadosPessoais.Controls.Add(this.Lbl_CPF);
-            this.Grp_DadosPessoais.Location = new System.Drawing.Point(12, 84);
+            this.Grp_DadosPessoais.Location = new System.Drawing.Point(3, 119);
             this.Grp_DadosPessoais.Name = "Grp_DadosPessoais";
             this.Grp_DadosPessoais.Size = new System.Drawing.Size(787, 210);
             this.Grp_DadosPessoais.TabIndex = 1;
@@ -385,7 +393,6 @@
             this.Grp_TemPai.Size = new System.Drawing.Size(181, 78);
             this.Grp_TemPai.TabIndex = 2;
             this.Grp_TemPai.TabStop = false;
-
             // 
             // Chk_TemPai
             // 
@@ -412,7 +419,7 @@
             this.Grp_Endereco.Controls.Add(this.Lbl_Complemento);
             this.Grp_Endereco.Controls.Add(this.Lbl_Estado);
             this.Grp_Endereco.Controls.Add(this.Lbl_Bairro);
-            this.Grp_Endereco.Location = new System.Drawing.Point(12, 297);
+            this.Grp_Endereco.Location = new System.Drawing.Point(3, 332);
             this.Grp_Endereco.Name = "Grp_Endereco";
             this.Grp_Endereco.Size = new System.Drawing.Size(787, 171);
             this.Grp_Endereco.TabIndex = 2;
@@ -452,25 +459,91 @@
             this.Grp_Outros.Controls.Add(this.Lbl_Profissao);
             this.Grp_Outros.Controls.Add(this.Txt_Profissao);
             this.Grp_Outros.Controls.Add(this.Txt_RendaFamiliar);
-            this.Grp_Outros.Location = new System.Drawing.Point(12, 469);
+            this.Grp_Outros.Location = new System.Drawing.Point(3, 504);
             this.Grp_Outros.Name = "Grp_Outros";
             this.Grp_Outros.Size = new System.Drawing.Size(787, 114);
             this.Grp_Outros.TabIndex = 3;
             this.Grp_Outros.TabStop = false;
             this.Grp_Outros.Text = "groupBox1";
             // 
+            // Tls_Principal
+            // 
+            this.Tls_Principal.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.Tls_Principal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.novoToolStripButton,
+            this.abrirToolStripButton,
+            this.salvarToolStripButton,
+            this.ApagaStripButton,
+            this.LimpaStripButton});
+            this.Tls_Principal.Location = new System.Drawing.Point(0, 0);
+            this.Tls_Principal.Name = "Tls_Principal";
+            this.Tls_Principal.Size = new System.Drawing.Size(811, 27);
+            this.Tls_Principal.TabIndex = 4;
+            this.Tls_Principal.Text = "toolStrip1";
+            // 
+            // novoToolStripButton
+            // 
+            this.novoToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.novoToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("novoToolStripButton.Image")));
+            this.novoToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.novoToolStripButton.Name = "novoToolStripButton";
+            this.novoToolStripButton.Size = new System.Drawing.Size(29, 24);
+            this.novoToolStripButton.Text = "&Novo";
+            this.novoToolStripButton.Click += new System.EventHandler(this.novoToolStripButton_Click);
+            // 
+            // abrirToolStripButton
+            // 
+            this.abrirToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.abrirToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("abrirToolStripButton.Image")));
+            this.abrirToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.abrirToolStripButton.Name = "abrirToolStripButton";
+            this.abrirToolStripButton.Size = new System.Drawing.Size(29, 24);
+            this.abrirToolStripButton.Text = "&Abrir";
+            this.abrirToolStripButton.Click += new System.EventHandler(this.abrirToolStripButton_Click);
+            // 
+            // salvarToolStripButton
+            // 
+            this.salvarToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.salvarToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("salvarToolStripButton.Image")));
+            this.salvarToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.salvarToolStripButton.Name = "salvarToolStripButton";
+            this.salvarToolStripButton.Size = new System.Drawing.Size(29, 24);
+            this.salvarToolStripButton.Text = "&Salvar";
+            this.salvarToolStripButton.Click += new System.EventHandler(this.salvarToolStripButton_Click);
+            // 
+            // ApagaStripButton
+            // 
+            this.ApagaStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ApagaStripButton.Image = global::CursoWindowsForms.Properties.Resources.ExcluirBarra;
+            this.ApagaStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ApagaStripButton.Name = "ApagaStripButton";
+            this.ApagaStripButton.Size = new System.Drawing.Size(29, 24);
+            this.ApagaStripButton.Text = "toolTipStrip1";
+            this.ApagaStripButton.Click += new System.EventHandler(this.ApagaStripButton_Click);
+            // 
+            // LimpaStripButton
+            // 
+            this.LimpaStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.LimpaStripButton.Image = global::CursoWindowsForms.Properties.Resources.LimparBarra;
+            this.LimpaStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.LimpaStripButton.Name = "LimpaStripButton";
+            this.LimpaStripButton.Size = new System.Drawing.Size(29, 24);
+            this.LimpaStripButton.Text = "toolTipStrip1";
+            this.LimpaStripButton.Click += new System.EventHandler(this.LimpaStripButton_Click);
+            // 
             // Frm_CadastroCliente_UC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.Controls.Add(this.Tls_Principal);
             this.Controls.Add(this.Grp_Outros);
             this.Controls.Add(this.Grp_Endereco);
             this.Controls.Add(this.Grp_DadosPessoais);
             this.Controls.Add(this.Grp_Codigo);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Frm_CadastroCliente_UC";
-            this.Size = new System.Drawing.Size(811, 594);
+            this.Size = new System.Drawing.Size(811, 627);
             this.Grp_Codigo.ResumeLayout(false);
             this.Grp_Codigo.PerformLayout();
             this.Grp_DadosPessoais.ResumeLayout(false);
@@ -483,7 +556,10 @@
             this.Grp_Endereco.PerformLayout();
             this.Grp_Outros.ResumeLayout(false);
             this.Grp_Outros.PerformLayout();
+            this.Tls_Principal.ResumeLayout(false);
+            this.Tls_Principal.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -528,5 +604,11 @@
         private System.Windows.Forms.RadioButton Rbt_Feminino;
         private System.Windows.Forms.RadioButton Rbt_Masculino;
         private System.Windows.Forms.ComboBox Cmb_Estados;
+        private System.Windows.Forms.ToolStrip Tls_Principal;
+        private System.Windows.Forms.ToolStripButton novoToolStripButton;
+        private System.Windows.Forms.ToolStripButton abrirToolStripButton;
+        private System.Windows.Forms.ToolStripButton salvarToolStripButton;
+        private System.Windows.Forms.ToolStripButton ApagaStripButton;
+        private System.Windows.Forms.ToolStripButton LimpaStripButton;
     }
 }
