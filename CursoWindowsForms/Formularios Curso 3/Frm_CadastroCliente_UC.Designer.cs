@@ -62,7 +62,7 @@
             this.Rbt_Feminino = new System.Windows.Forms.RadioButton();
             this.Rbt_Masculino = new System.Windows.Forms.RadioButton();
             this.Grp_TemPai = new System.Windows.Forms.GroupBox();
-            this.Chk_TemPai = new System.Windows.Forms.CheckBox();
+            this.Chk_NaoTemPai = new System.Windows.Forms.CheckBox();
             this.Grp_Endereco = new System.Windows.Forms.GroupBox();
             this.Cmb_Estados = new System.Windows.Forms.ComboBox();
             this.Txt_Cidade = new System.Windows.Forms.TextBox();
@@ -386,7 +386,7 @@
             // Grp_TemPai
             // 
             this.Grp_TemPai.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Grp_TemPai.Controls.Add(this.Chk_TemPai);
+            this.Grp_TemPai.Controls.Add(this.Chk_NaoTemPai);
             this.Grp_TemPai.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.Grp_TemPai.Location = new System.Drawing.Point(600, 67);
             this.Grp_TemPai.Name = "Grp_TemPai";
@@ -396,14 +396,14 @@
             // 
             // Chk_TemPai
             // 
-            this.Chk_TemPai.AutoSize = true;
-            this.Chk_TemPai.Location = new System.Drawing.Point(6, 36);
-            this.Chk_TemPai.Name = "Chk_TemPai";
-            this.Chk_TemPai.Size = new System.Drawing.Size(95, 20);
-            this.Chk_TemPai.TabIndex = 0;
-            this.Chk_TemPai.Text = "checkBox1";
-            this.Chk_TemPai.UseVisualStyleBackColor = true;
-            this.Chk_TemPai.CheckedChanged += new System.EventHandler(this.Chk_TemPai_CheckedChanged);
+            this.Chk_NaoTemPai.AutoSize = true;
+            this.Chk_NaoTemPai.Location = new System.Drawing.Point(6, 36);
+            this.Chk_NaoTemPai.Name = "Chk_TemPai";
+            this.Chk_NaoTemPai.Size = new System.Drawing.Size(95, 20);
+            this.Chk_NaoTemPai.TabIndex = 0;
+            this.Chk_NaoTemPai.Text = "checkBox1";
+            this.Chk_NaoTemPai.UseVisualStyleBackColor = true;
+            this.Chk_NaoTemPai.CheckedChanged += new System.EventHandler(this.Chk_TemPai_CheckedChanged);
             // 
             // Grp_Endereco
             // 
@@ -598,7 +598,7 @@
         private System.Windows.Forms.TextBox Txt_Cidade;
         private System.Windows.Forms.Label Lbl_Cidade;
         private System.Windows.Forms.GroupBox Grp_TemPai;
-        private System.Windows.Forms.CheckBox Chk_TemPai;
+        private System.Windows.Forms.CheckBox Chk_NaoTemPai;
         private System.Windows.Forms.GroupBox Grp_Genero;
         private System.Windows.Forms.RadioButton Rbt_Outros;
         private System.Windows.Forms.RadioButton Rbt_Feminino;

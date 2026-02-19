@@ -4,7 +4,7 @@ using System.Windows.Forms;
 using CursoWindowsFormsBibliotecas.Classes;
 using System.ComponentModel.DataAnnotations;
 using System.Security;
-
+using Microsoft.VisualBasic;
 namespace CursoWindowsForms
 {
     public partial class Frm_CadastroCliente_UC : UserControl
@@ -23,7 +23,7 @@ namespace CursoWindowsForms
             Lbl_Bairro.Text = "Bairro";
             Lbl_CEP.Text = "CEP";
             Lbl_Complemento.Text = "Complemento";
-            Lbl_NumeroCliente.Text = "CPF";
+            Lbl_NumeroCliente.Text = "Código";
             Lbl_Estado.Text = "Estado";
             Lbl_Logradouro.Text = "Logradouro";
             Lbl_NomeCliente.Text = "Nome";
@@ -34,7 +34,7 @@ namespace CursoWindowsForms
             Lbl_Telefone.Text = "Telefone";
             Lbl_CPF.Text = "CPF";
             Lbl_Cidade.Text = "Cidade";
-            Chk_TemPai.Text = "Pai Desconhecido";
+            Chk_NaoTemPai.Text = "Pai Desconhecido";
 
             Cmb_Estados.Items.Clear();
             Cmb_Estados.Items.Add("Acre (AC)");
@@ -75,8 +75,8 @@ namespace CursoWindowsForms
 
         private void Chk_TemPai_CheckedChanged(object sender, EventArgs e)
         {
-            Txt_NomePai.Enabled = !Chk_TemPai.Checked;
-            Lbl_NomePai.Enabled = !Chk_TemPai.Checked;
+            Txt_NomePai.Enabled = !Chk_NaoTemPai.Checked;
+            Lbl_NomePai.Enabled = !Chk_NaoTemPai.Checked;
         }
 
         private void novoToolStripButton_Click(object sender, EventArgs e)
@@ -84,6 +84,7 @@ namespace CursoWindowsForms
             try
             {
                 Cliente.Unit C = new Cliente.Unit();
+                C = LeituraFormulario();
                 C.Id = Txt_Codigo.Text;
                 C.ValidaClasse();
                 MessageBox.Show("Classe foi inicializada sem erros", "ByteBank",MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -93,7 +94,9 @@ namespace CursoWindowsForms
                 MessageBox.Show(Ex.Message, "Código do Cliente", MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return;
             }
+           
         }
+
 
         private void abrirToolStripButton_Click(object sender, EventArgs e)
         {
@@ -114,5 +117,41 @@ namespace CursoWindowsForms
         {
             MessageBox.Show("Efetuei um clique sobre o botão LIMPAR");
         }
+        Cliente.Unit LeituraFormulario()
+        {
+            Cliente.Unit C = new Cliente.Unit
+            {
+                Id = Txt_Codigo.Text,
+                Nome = Txt_NomeCliente.Text,
+                NomePai = Txt_NomePai.Text,
+                NomeMae = Txt_NomeMae.Text,
+                NaoTemPai = Chk_NaoTemPai.Checked
+            };
+
+            if (Rbt_Masculino.Checked) C.Genero = 0;
+            if (Rbt_Feminino.Checked) C.Genero = 1;
+            if (Rbt_Outros.Checked) C.Genero = 2;
+
+            C.CPF = Txt_CPF.Text;
+            C.CEP = Txt_CEP.Text;
+            C.Logradouro = Txt_Logradouro.Text;
+            C.Complemento = Txt_Complemento.Text;
+            C.Cidade = Txt_Cidade.Text;
+            C.Bairro = Txt_Bairro.Text;
+
+            C.Estado = Cmb_Estados.SelectedIndex < 0 ? "" : Cmb_Estados.Items[Cmb_Estados.SelectedIndex].ToString();
+
+            C.Telefone = Txt_Telefone.Text;
+            C.Profissao = Txt_Profissao.Text;
+
+            if (Information.IsNumeric(Txt_RendaFamiliar.Text))
+            { 
+                Double vRenda = Convert.ToDouble(Txt_RendaFamiliar.Text); 
+                C.RendaFamiliar = vRenda < 0 ? 0 : vRenda;
+            }
+
+            return C;
+        }
+
     }
 }
