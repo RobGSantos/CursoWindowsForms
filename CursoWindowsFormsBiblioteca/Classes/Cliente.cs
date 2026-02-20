@@ -93,7 +93,6 @@ namespace CursoWindowsFormsBibliotecas.Classes
                 if (NaoTemPai == false && NomePai == "") throw new Exception("Nome do Pai não pode estar vazio quando a propriedade Pai Desconhecido não estiver marcada");
                 
                 bool validaCPF = Cls_Uteis.Valida(CPF);
-
             }
 
         }

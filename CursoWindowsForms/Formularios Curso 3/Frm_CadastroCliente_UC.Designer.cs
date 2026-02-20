@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_CadastroCliente_UC));
-            this.Lbl_NumeroCliente = new System.Windows.Forms.Label();
             this.Txt_Codigo = new System.Windows.Forms.TextBox();
             this.Lbl_NomeCliente = new System.Windows.Forms.Label();
             this.Txt_NomeCliente = new System.Windows.Forms.TextBox();
@@ -83,18 +82,9 @@
             this.Tls_Principal.SuspendLayout();
             this.SuspendLayout();
             // 
-            // Lbl_NumeroCliente
-            // 
-            this.Lbl_NumeroCliente.AutoSize = true;
-            this.Lbl_NumeroCliente.Location = new System.Drawing.Point(17, 15);
-            this.Lbl_NumeroCliente.Name = "Lbl_NumeroCliente";
-            this.Lbl_NumeroCliente.Size = new System.Drawing.Size(44, 16);
-            this.Lbl_NumeroCliente.TabIndex = 0;
-            this.Lbl_NumeroCliente.Text = "label1";
-            // 
             // Txt_Codigo
             // 
-            this.Txt_Codigo.Location = new System.Drawing.Point(16, 33);
+            this.Txt_Codigo.Location = new System.Drawing.Point(6, 20);
             this.Txt_Codigo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txt_Codigo.Name = "Txt_Codigo";
             this.Txt_Codigo.Size = new System.Drawing.Size(268, 22);
@@ -154,6 +144,7 @@
             this.Txt_CEP.Name = "Txt_CEP";
             this.Txt_CEP.Size = new System.Drawing.Size(218, 22);
             this.Txt_CEP.TabIndex = 0;
+            this.Txt_CEP.Leave += new System.EventHandler(this.Txt_CEP_Leave);
             // 
             // Lbl_Logradouro
             // 
@@ -311,10 +302,9 @@
             // Grp_Codigo
             // 
             this.Grp_Codigo.Controls.Add(this.Txt_Codigo);
-            this.Grp_Codigo.Controls.Add(this.Lbl_NumeroCliente);
             this.Grp_Codigo.Location = new System.Drawing.Point(3, 42);
             this.Grp_Codigo.Name = "Grp_Codigo";
-            this.Grp_Codigo.Size = new System.Drawing.Size(301, 71);
+            this.Grp_Codigo.Size = new System.Drawing.Size(301, 55);
             this.Grp_Codigo.TabIndex = 0;
             this.Grp_Codigo.TabStop = false;
             this.Grp_Codigo.Text = "groupBox1";
@@ -394,11 +384,11 @@
             this.Grp_TemPai.TabIndex = 2;
             this.Grp_TemPai.TabStop = false;
             // 
-            // Chk_TemPai
+            // Chk_NaoTemPai
             // 
             this.Chk_NaoTemPai.AutoSize = true;
             this.Chk_NaoTemPai.Location = new System.Drawing.Point(6, 36);
-            this.Chk_NaoTemPai.Name = "Chk_TemPai";
+            this.Chk_NaoTemPai.Name = "Chk_NaoTemPai";
             this.Chk_NaoTemPai.Size = new System.Drawing.Size(95, 20);
             this.Chk_NaoTemPai.TabIndex = 0;
             this.Chk_NaoTemPai.Text = "checkBox1";
@@ -564,8 +554,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label Lbl_NumeroCliente;
         private System.Windows.Forms.TextBox Txt_Codigo;
         private System.Windows.Forms.Label Lbl_NomeCliente;
         private System.Windows.Forms.TextBox Txt_NomeCliente;

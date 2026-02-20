@@ -5,6 +5,8 @@ using CursoWindowsFormsBibliotecas.Classes;
 using System.ComponentModel.DataAnnotations;
 using System.Security;
 using Microsoft.VisualBasic;
+using CursoWindowsFormsBibliotecas;
+using CursoWindowsFormsBiblioteca.Classes;
 namespace CursoWindowsForms
 {
     public partial class Frm_CadastroCliente_UC : UserControl
@@ -23,7 +25,6 @@ namespace CursoWindowsForms
             Lbl_Bairro.Text = "Bairro";
             Lbl_CEP.Text = "CEP";
             Lbl_Complemento.Text = "Complemento";
-            Lbl_NumeroCliente.Text = "Código";
             Lbl_Estado.Text = "Estado";
             Lbl_Logradouro.Text = "Logradouro";
             Lbl_NomeCliente.Text = "Nome";
@@ -84,14 +85,21 @@ namespace CursoWindowsForms
             try
             {
                 Cliente.Unit C = new Cliente.Unit();
+                
                 C = LeituraFormulario();
-                C.Id = Txt_Codigo.Text;
                 C.ValidaClasse();
+                C.ValidaComplemento();
+
                 MessageBox.Show("Classe foi inicializada sem erros", "ByteBank",MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (ValidationException Ex)
             {
-                MessageBox.Show(Ex.Message, "Código do Cliente", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show(Ex.Message, "ByteBank", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
            
@@ -153,5 +161,24 @@ namespace CursoWindowsForms
             return C;
         }
 
+        private void Txt_CEP_Leave(object sender, EventArgs e)
+        {
+            string vCep = Txt_CEP.Text;
+
+            if (string.IsNullOrEmpty(vCep)) return;
+            if (vCep.Length != 8) return;
+            if (!Information.IsNumeric(vCep)) return;
+
+
+
+            var vJson = Cls_Uteis.GeraJSONCEP(vCep);
+            Cep.Unit CEP = new Cep.Unit();
+            CEP = Cep.DesSerializedUnit(vJson);
+
+            Txt_Logradouro.Text = CEP.logradouro;
+            Txt_Bairro.Text = CEP.bairro;
+            Txt_Cidade.Text = CEP.localidade;
+
+        }
     }
 }

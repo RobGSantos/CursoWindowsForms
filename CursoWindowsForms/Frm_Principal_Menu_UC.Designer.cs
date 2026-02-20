@@ -65,7 +65,7 @@
             this.Mnu_Principal.Location = new System.Drawing.Point(0, 0);
             this.Mnu_Principal.Name = "Mnu_Principal";
             this.Mnu_Principal.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.Mnu_Principal.Size = new System.Drawing.Size(800, 30);
+            this.Mnu_Principal.Size = new System.Drawing.Size(800, 28);
             this.Mnu_Principal.TabIndex = 0;
             this.Mnu_Principal.Text = "menuStrip1";
             // 
@@ -228,11 +228,11 @@
             // 
             this.Tbc_Aplicacoes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Tbc_Aplicacoes.ImageList = this.Iml_Imagens;
-            this.Tbc_Aplicacoes.Location = new System.Drawing.Point(0, 30);
+            this.Tbc_Aplicacoes.Location = new System.Drawing.Point(0, 28);
             this.Tbc_Aplicacoes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Tbc_Aplicacoes.Name = "Tbc_Aplicacoes";
             this.Tbc_Aplicacoes.SelectedIndex = 0;
-            this.Tbc_Aplicacoes.Size = new System.Drawing.Size(800, 420);
+            this.Tbc_Aplicacoes.Size = new System.Drawing.Size(800, 422);
             this.Tbc_Aplicacoes.TabIndex = 1;
             this.Tbc_Aplicacoes.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Tbc_Aplicacoes_MouseClick);
             this.Tbc_Aplicacoes.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Tbc_Aplicacoes_MouseDown);
