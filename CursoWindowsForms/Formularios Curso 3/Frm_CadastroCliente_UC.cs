@@ -1,12 +1,14 @@
 ﻿
-using System;
-using System.Windows.Forms;
-using CursoWindowsFormsBibliotecas.Classes;
-using System.ComponentModel.DataAnnotations;
-using System.Security;
-using Microsoft.VisualBasic;
-using CursoWindowsFormsBibliotecas;
 using CursoWindowsFormsBiblioteca.Classes;
+using CursoWindowsFormsBibliotecas;
+using CursoWindowsFormsBibliotecas.Classes;
+using Microsoft.VisualBasic;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Runtime.ConstrainedExecution;
+using System.Security;
+using System.Windows.Forms;
 namespace CursoWindowsForms
 {
     public partial class Frm_CadastroCliente_UC : UserControl
@@ -166,19 +168,57 @@ namespace CursoWindowsForms
             string vCep = Txt_CEP.Text;
 
             if (string.IsNullOrEmpty(vCep)) return;
-            if (vCep.Length != 8) return;
-            if (!Information.IsNumeric(vCep)) return;
-
-
+            if (vCep.Length != 8)
+            {
+                LimpaDadosEndereco(true);
+                return;
+            }
+            if (!Information.IsNumeric(vCep))
+            {
+                LimpaDadosEndereco(true);
+                return;
+            }
 
             var vJson = Cls_Uteis.GeraJSONCEP(vCep);
-            Cep.Unit CEP = new Cep.Unit();
-            CEP = Cep.DesSerializedUnit(vJson);
+
+            //Cep.Unit CEP = new Cep.Unit();
+            Cep.Unit CEP = Cep.DesSerializedUnit(vJson);
+
+            if (string.IsNullOrEmpty(CEP.estado))
+            {
+                MessageBox.Show("O número do CEP informado não foi localizado!","CEP ",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                LimpaDadosEndereco(false);
+                return;
+            }
 
             Txt_Logradouro.Text = CEP.logradouro;
             Txt_Bairro.Text = CEP.bairro;
             Txt_Cidade.Text = CEP.localidade;
-
+            Cmb_Estados.SelectedIndex = -1;
+            
+            for (int i = 0; i <= Cmb_Estados.Items.Count - 1; i++)
+            {
+                var item = Cmb_Estados.Items[i].ToString();
+                    
+                if (!item.Contains(CEP.estado)) continue;
+                 
+                Cmb_Estados.SelectedIndex = i;
+            }
+            
         }
+
+        private void LimpaDadosEndereco(bool cepInvalido)
+        {
+            if (cepInvalido) 
+                MessageBox.Show("CEP inválido! Digite apenas os 8 números do CEP!","CEP INVÁLIDO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            Txt_CEP.Text = string.Empty;
+            Txt_Logradouro.Text = string.Empty;
+            Txt_Bairro.Text = string.Empty;
+            Txt_Cidade.Text = string.Empty;
+            Cmb_Estados.SelectedIndex = -1;
+            Txt_CEP.Select();
+        }
+
     }
 }

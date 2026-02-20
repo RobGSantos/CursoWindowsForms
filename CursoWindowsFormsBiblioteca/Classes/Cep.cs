@@ -1,5 +1,6 @@
 ﻿
 using Newtonsoft.Json;
+using System.Text;
 
 namespace CursoWindowsFormsBiblioteca.Classes
 {
@@ -24,8 +25,8 @@ namespace CursoWindowsFormsBiblioteca.Classes
 
         public static Unit DesSerializedUnit(string Json)
         {
-            string corrigido = System.Text.Encoding.UTF8.GetString(
-                System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(Json));
+            string corrigido = Encoding.UTF8.GetString(
+                Encoding.GetEncoding("ISO-8859-1").GetBytes(Json));
             return JsonConvert.DeserializeObject<Unit>(corrigido);
         }
     }
