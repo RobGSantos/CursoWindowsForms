@@ -1,4 +1,4 @@
 <Solution>
   <Project Path="CursoWindowsForms/CursoWindowsForms.csproj" Id="62ba7bca-8b59-4c4e-8eb3-6a488563bfeb" />
-  <Project Path="CursoWindowsFormsBiblioteca/CursoWindowsFormsBibliotecas.csproj" Id="27647a5d-e4f2-48a6-b21b-4b60f46019fb" />
+  <Project Path="CursoWindowsFormsBiblioteca/CursoWindowsFormsBiblioteca.csproj" Id="27647a5d-e4f2-48a6-b21b-4b60f46019fb" />
 </Solution>

@@ -417,7 +417,7 @@
             this.Chk_NaoTemPai.TabIndex = 0;
             this.Chk_NaoTemPai.Text = "checkBox1";
             this.Chk_NaoTemPai.UseVisualStyleBackColor = true;
-            this.Chk_NaoTemPai.CheckedChanged += new System.EventHandler(this.Chk_TemPai_CheckedChanged);
+            this.Chk_NaoTemPai.CheckedChanged += new System.EventHandler(this.Chk_NaoTemPai_CheckedChanged);
             // 
             // Grp_Endereco
             // 

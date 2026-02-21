@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Windows.Forms;
-using CursoWindowsFormsBibliotecas;
+using CursoWindowsFormsBiblioteca;
 
 
 namespace CursoWindowsForms

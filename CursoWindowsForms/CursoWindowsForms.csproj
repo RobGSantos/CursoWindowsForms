@@ -350,9 +350,9 @@
     <Content Include="Imagens\user.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CursoWindowsFormsBiblioteca\CursoWindowsFormsBibliotecas.csproj">
+    <ProjectReference Include="..\CursoWindowsFormsBiblioteca\CursoWindowsFormsBiblioteca.csproj">
       <Project>{27647a5d-e4f2-48a6-b21b-4b60f46019fb}</Project>
-      <Name>CursoWindowsFormsBibliotecas</Name>
+      <Name>CursoWindowsFormsBiblioteca</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

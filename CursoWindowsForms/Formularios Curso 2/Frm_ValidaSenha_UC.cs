@@ -1,4 +1,4 @@
-﻿using CursoWindowsFormsBibliotecas;
+﻿using CursoWindowsFormsBiblioteca;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

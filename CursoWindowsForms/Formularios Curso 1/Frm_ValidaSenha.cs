@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using CursoWindowsFormsBibliotecas;
+using CursoWindowsFormsBiblioteca;
 
 namespace CursoWindowsForms
 {

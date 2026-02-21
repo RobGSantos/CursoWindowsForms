@@ -1,7 +1,8 @@
 ﻿
 using CursoWindowsFormsBiblioteca.Classes;
-using CursoWindowsFormsBibliotecas;
-using CursoWindowsFormsBibliotecas.Classes;
+using CursoWindowsFormsBiblioteca.DataBases;
+using CursoWindowsFormsBiblioteca;
+
 using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
@@ -78,7 +79,7 @@ namespace CursoWindowsForms
             
         }
 
-        private void Chk_TemPai_CheckedChanged(object sender, EventArgs e)
+        private void Chk_NaoTemPai_CheckedChanged(object sender, EventArgs e)
         {
             Txt_NomePai.Enabled = !Chk_NaoTemPai.Checked;
             Lbl_NomePai.Enabled = !Chk_NaoTemPai.Checked;
@@ -93,6 +94,12 @@ namespace CursoWindowsForms
                 C = LeituraFormulario();
                 C.ValidaClasse();
                 C.ValidaComplemento();
+
+                Fichario F = new Fichario(@"C:\Users\robso\OneDrive - rede.sp\Documentos\source\repos\CursoWindowsForms\Fichario");
+
+                if(!F.status)
+                    MessageBox.Show(F.mensagem,
+                    "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 string clienteJson = Cliente.SerializedUnit(C);
 
