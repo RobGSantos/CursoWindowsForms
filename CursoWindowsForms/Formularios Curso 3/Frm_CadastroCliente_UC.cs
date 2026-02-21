@@ -96,6 +96,8 @@ namespace CursoWindowsForms
 
                 string clienteJson = Cliente.SerializedUnit(C);
 
+
+
                 MessageBox.Show($"Classe vai ser incluído. O conteúdo será: {clienteJson}", 
                     "ByteBank",MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
