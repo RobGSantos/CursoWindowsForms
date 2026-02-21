@@ -74,6 +74,8 @@ namespace CursoWindowsForms
             Tls_Principal.Items[3].ToolTipText = "Apaga o cliente selecionado";
             Tls_Principal.Items[4].ToolTipText = "Limpa dados da tela de entrada de dados";
 
+            LimparDadosFormulario();
+            
         }
 
         private void Chk_TemPai_CheckedChanged(object sender, EventArgs e)
@@ -92,7 +94,10 @@ namespace CursoWindowsForms
                 C.ValidaClasse();
                 C.ValidaComplemento();
 
-                MessageBox.Show("Classe foi inicializada sem erros", "ByteBank",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string clienteJson = Cliente.SerializedUnit(C);
+
+                MessageBox.Show($"Classe vai ser incluído. O conteúdo será: {clienteJson}", 
+                    "ByteBank",MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (ValidationException Ex)
             {
@@ -120,12 +125,13 @@ namespace CursoWindowsForms
 
         private void ApagaStripButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Efetuei um clique sobre o botão EXCLUIR");
+            MessageBox.Show("Efetuei um clique sobre o botão APAGAR");
         }
 
         private void LimpaStripButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Efetuei um clique sobre o botão LIMPAR");
+            LimparDadosFormulario();
+            
         }
         Cliente.Unit LeituraFormulario()
         {
@@ -168,12 +174,7 @@ namespace CursoWindowsForms
             string vCep = Txt_CEP.Text;
 
             if (string.IsNullOrEmpty(vCep)) return;
-            if (vCep.Length != 8)
-            {
-                LimpaDadosEndereco(true);
-                return;
-            }
-            if (!Information.IsNumeric(vCep))
+            if( (vCep.Length != 8) || (!Information.IsNumeric(vCep)))
             {
                 LimpaDadosEndereco(true);
                 return;
@@ -181,7 +182,6 @@ namespace CursoWindowsForms
 
             var vJson = Cls_Uteis.GeraJSONCEP(vCep);
 
-            //Cep.Unit CEP = new Cep.Unit();
             Cep.Unit CEP = Cep.DesSerializedUnit(vJson);
 
             if (string.IsNullOrEmpty(CEP.estado))
@@ -218,6 +218,22 @@ namespace CursoWindowsForms
             Txt_Cidade.Text = string.Empty;
             Cmb_Estados.SelectedIndex = -1;
             Txt_CEP.Select();
+        }
+
+        private void LimparDadosFormulario()
+        {
+            Txt_Codigo.Text = string.Empty;
+            Txt_NomeCliente.Text = string.Empty;
+            Txt_NomeMae.Text = string.Empty;
+            Txt_NomePai.Text = string.Empty;
+            Txt_CPF.Text = string.Empty;
+            Chk_NaoTemPai.Checked = false;
+            Rbt_Feminino.Checked = true;
+            Rbt_Feminino.Checked = false;
+            Txt_Profissao.Text = string.Empty;
+            Txt_Telefone.Text = string.Empty;
+            Txt_RendaFamiliar.Text = string.Empty;
+            LimpaDadosEndereco(false);
         }
 
     }

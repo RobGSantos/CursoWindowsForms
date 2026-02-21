@@ -1,8 +1,9 @@
 ﻿
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
-using System;
 
 namespace CursoWindowsFormsBibliotecas.Classes
 {
@@ -100,6 +101,18 @@ namespace CursoWindowsFormsBibliotecas.Classes
         public class List
         {
             public List<Unit> ListUnit { get; set; }
+        }
+
+        public static Unit DesSerializedUnit(string Json)
+        {
+            string corrigido = Encoding.UTF8.GetString(
+                Encoding.GetEncoding("ISO-8859-1").GetBytes(Json));
+            return JsonConvert.DeserializeObject<Unit>(corrigido);
+        }
+
+        public static string SerializedUnit(Unit unit)
+        {
+            return JsonConvert.SerializeObject(unit);
         }
     }
 }

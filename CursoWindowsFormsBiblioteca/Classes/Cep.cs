@@ -29,5 +29,10 @@ namespace CursoWindowsFormsBiblioteca.Classes
                 Encoding.GetEncoding("ISO-8859-1").GetBytes(Json));
             return JsonConvert.DeserializeObject<Unit>(corrigido);
         }
+
+        public static string SerializedUnit(Unit unit)
+        {
+            return JsonConvert.SerializeObject(unit);
+        }
     }
 }
