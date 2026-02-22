@@ -157,6 +157,39 @@ namespace CursoWindowsForms
                 return;
             }
 
+            Cliente.Unit C = new Cliente.Unit();
+            C = Cliente.DesSerializedUnit(clienteJson);
+            EscreveFormulario(C);
+        }
+
+        private void EscreveFormulario(Cliente.Unit C)
+        {
+            Txt_NomeCliente.Text = C.Nome;
+            Txt_NomeMae.Text = C.NomeMae;
+            Chk_NaoTemPai.Checked = C.NaoTemPai;
+            Txt_NomePai.Text = C.NomePai;
+            Txt_CPF.Text = C.CPF;
+            Rbt_Masculino.Checked = C.Genero == 0;
+            Rbt_Feminino.Checked = C.Genero == 1;
+            Rbt_Outros.Checked = C.Genero == 2;
+            Txt_CEP.Text = C.CEP;
+            Txt_Logradouro.Text = C.Logradouro;
+            Txt_Complemento.Text = C.Complemento;
+            Txt_Bairro.Text = C.Bairro;
+            Txt_Cidade.Text = C.Cidade;
+
+            for (int i = 0; i<= Cmb_Estados.Items.Count - 1; i++)
+            {
+                if (C.Estado.Equals(Cmb_Estados.Items[i].ToString()))
+                {
+                    Cmb_Estados.SelectedIndex = i; 
+                    break;
+                }
+            }
+
+            Txt_Telefone.Text = C.Telefone;
+            Txt_Profissao.Text = C.Profissao;
+            Txt_RendaFamiliar.Text = C.RendaFamiliar.ToString();
 
         }
 

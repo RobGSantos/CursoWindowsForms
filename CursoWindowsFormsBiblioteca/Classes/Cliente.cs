@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 using System.Text;
 
 namespace CursoWindowsFormsBiblioteca.Classes
@@ -105,14 +106,33 @@ namespace CursoWindowsFormsBiblioteca.Classes
 
         public static Unit DesSerializedUnit(string Json)
         {
-            string corrigido = Encoding.UTF8.GetString(
-                Encoding.GetEncoding("ISO-8859-1").GetBytes(Json));
-            return JsonConvert.DeserializeObject<Unit>(corrigido);
+            //string corrigido = Encoding.UTF8.GetString(
+            //    Encoding.GetEncoding("ISO-8859-1").GetBytes(Json));
+            var settings = new JsonSerializerSettings
+            {
+                Formatting = Formatting.None,                 // ou Formatting.Indented
+                NullValueHandling = NullValueHandling.Include,
+                DefaultValueHandling = DefaultValueHandling.Include,
+                DateFormatHandling = DateFormatHandling.IsoDateFormat,
+                DateTimeZoneHandling = DateTimeZoneHandling.RoundtripKind,
+                Culture = CultureInfo.InvariantCulture
+            };
+
+            return JsonConvert.DeserializeObject<Unit>(Json, settings);
         }
 
         public static string SerializedUnit(Unit unit)
         {
-            return JsonConvert.SerializeObject(unit);
+            var settings = new JsonSerializerSettings
+            {
+                Formatting = Formatting.None,                 // ou Formatting.Indented
+                NullValueHandling = NullValueHandling.Include,
+                DefaultValueHandling = DefaultValueHandling.Include,
+                DateFormatHandling = DateFormatHandling.IsoDateFormat,
+                DateTimeZoneHandling = DateTimeZoneHandling.RoundtripKind,
+                Culture = CultureInfo.InvariantCulture
+            };
+            return JsonConvert.SerializeObject(unit, settings);
         }
     }
 }
