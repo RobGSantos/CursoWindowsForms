@@ -97,16 +97,26 @@ namespace CursoWindowsForms
 
                 Fichario F = new Fichario(@"C:\Users\robso\OneDrive - rede.sp\Documentos\source\repos\CursoWindowsForms\Fichario");
 
-                if(!F.status)
-                    MessageBox.Show(F.mensagem,
-                    "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (!F.status)
+                {
+                    MessageBox.Show($"Err: {F.mensagem}",
+                    "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
                 string clienteJson = Cliente.SerializedUnit(C);
 
+                F.Incluir(C.Id, clienteJson);
 
+                if (!F.status)
+                {
+                    MessageBox.Show($"Err: {F.mensagem}",
+                    "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
-                MessageBox.Show($"Classe vai ser incluído. O conteúdo será: {clienteJson}", 
-                    "ByteBank",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"{F.mensagem}",
+                    "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (ValidationException Ex)
             {
@@ -118,13 +128,36 @@ namespace CursoWindowsForms
                 MessageBox.Show(Ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-           
+
         }
 
 
         private void abrirToolStripButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Efetuei um clique sobre o botão ABRIR");
+            if (string.IsNullOrEmpty(Txt_Codigo.Text))
+            {
+                MessageBox.Show("O código do cliente está vazio! Insira o código para abrir o formulário desejado!", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            Fichario F = new Fichario(@"C:\Users\robso\OneDrive - rede.sp\Documentos\source\repos\CursoWindowsForms\Fichario");
+
+            if (!F.status)
+            {
+                MessageBox.Show($"Err: {F.mensagem}",
+                    "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            var clienteJson = F.Buscar(Txt_Codigo.Text);
+
+            if (!F.status)
+            {
+                MessageBox.Show(F.mensagem, "Byte Bank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
         }
 
         private void salvarToolStripButton_Click(object sender, EventArgs e)

@@ -85,7 +85,7 @@
             // Txt_Codigo
             // 
             this.Txt_Codigo.Location = new System.Drawing.Point(4, 16);
-            this.Txt_Codigo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_Codigo.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Codigo.Name = "Txt_Codigo";
             this.Txt_Codigo.Size = new System.Drawing.Size(202, 20);
             this.Txt_Codigo.TabIndex = 0;
@@ -105,7 +105,7 @@
             this.Txt_NomeCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Txt_NomeCliente.Location = new System.Drawing.Point(12, 28);
-            this.Txt_NomeCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_NomeCliente.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_NomeCliente.Name = "Txt_NomeCliente";
             this.Txt_NomeCliente.Size = new System.Drawing.Size(575, 20);
             this.Txt_NomeCliente.TabIndex = 0;
@@ -125,7 +125,7 @@
             this.Txt_NomePai.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Txt_NomePai.Location = new System.Drawing.Point(12, 100);
-            this.Txt_NomePai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_NomePai.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_NomePai.Name = "Txt_NomePai";
             this.Txt_NomePai.Size = new System.Drawing.Size(434, 20);
             this.Txt_NomePai.TabIndex = 2;
@@ -143,7 +143,7 @@
             // Txt_CEP
             // 
             this.Txt_CEP.Location = new System.Drawing.Point(12, 33);
-            this.Txt_CEP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_CEP.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_CEP.Name = "Txt_CEP";
             this.Txt_CEP.Size = new System.Drawing.Size(164, 20);
             this.Txt_CEP.TabIndex = 0;
@@ -164,7 +164,7 @@
             this.Txt_Logradouro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Txt_Logradouro.Location = new System.Drawing.Point(184, 33);
-            this.Txt_Logradouro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_Logradouro.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Logradouro.Name = "Txt_Logradouro";
             this.Txt_Logradouro.Size = new System.Drawing.Size(402, 20);
             this.Txt_Logradouro.TabIndex = 1;
@@ -182,7 +182,7 @@
             // Txt_Complemento
             // 
             this.Txt_Complemento.Location = new System.Drawing.Point(12, 68);
-            this.Txt_Complemento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_Complemento.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Complemento.Name = "Txt_Complemento";
             this.Txt_Complemento.Size = new System.Drawing.Size(164, 20);
             this.Txt_Complemento.TabIndex = 2;
@@ -200,7 +200,7 @@
             // Txt_Bairro
             // 
             this.Txt_Bairro.Location = new System.Drawing.Point(184, 67);
-            this.Txt_Bairro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_Bairro.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Bairro.Name = "Txt_Bairro";
             this.Txt_Bairro.Size = new System.Drawing.Size(402, 20);
             this.Txt_Bairro.TabIndex = 3;
@@ -228,7 +228,7 @@
             // Txt_Telefone
             // 
             this.Txt_Telefone.Location = new System.Drawing.Point(12, 26);
-            this.Txt_Telefone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_Telefone.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Telefone.Name = "Txt_Telefone";
             this.Txt_Telefone.Size = new System.Drawing.Size(248, 20);
             this.Txt_Telefone.TabIndex = 0;
@@ -248,7 +248,7 @@
             this.Txt_Profissao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Txt_Profissao.Location = new System.Drawing.Point(263, 26);
-            this.Txt_Profissao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_Profissao.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Profissao.Name = "Txt_Profissao";
             this.Txt_Profissao.Size = new System.Drawing.Size(324, 20);
             this.Txt_Profissao.TabIndex = 1;
@@ -266,7 +266,7 @@
             // Txt_RendaFamiliar
             // 
             this.Txt_RendaFamiliar.Location = new System.Drawing.Point(12, 60);
-            this.Txt_RendaFamiliar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_RendaFamiliar.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_RendaFamiliar.Name = "Txt_RendaFamiliar";
             this.Txt_RendaFamiliar.Size = new System.Drawing.Size(247, 20);
             this.Txt_RendaFamiliar.TabIndex = 2;
@@ -276,7 +276,7 @@
             this.Txt_NomeMae.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Txt_NomeMae.Location = new System.Drawing.Point(12, 66);
-            this.Txt_NomeMae.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_NomeMae.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_NomeMae.Name = "Txt_NomeMae";
             this.Txt_NomeMae.Size = new System.Drawing.Size(434, 20);
             this.Txt_NomeMae.TabIndex = 1;
@@ -306,7 +306,7 @@
             this.Txt_CPF.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Txt_CPF.Location = new System.Drawing.Point(12, 136);
-            this.Txt_CPF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_CPF.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_CPF.Name = "Txt_CPF";
             this.Txt_CPF.Size = new System.Drawing.Size(187, 20);
             this.Txt_CPF.TabIndex = 4;
@@ -315,9 +315,9 @@
             // 
             this.Grp_Codigo.Controls.Add(this.Txt_Codigo);
             this.Grp_Codigo.Location = new System.Drawing.Point(2, 34);
-            this.Grp_Codigo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Grp_Codigo.Margin = new System.Windows.Forms.Padding(2);
             this.Grp_Codigo.Name = "Grp_Codigo";
-            this.Grp_Codigo.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Grp_Codigo.Padding = new System.Windows.Forms.Padding(2);
             this.Grp_Codigo.Size = new System.Drawing.Size(226, 45);
             this.Grp_Codigo.TabIndex = 0;
             this.Grp_Codigo.TabStop = false;
@@ -336,9 +336,9 @@
             this.Grp_DadosPessoais.Controls.Add(this.Txt_CPF);
             this.Grp_DadosPessoais.Controls.Add(this.Lbl_CPF);
             this.Grp_DadosPessoais.Location = new System.Drawing.Point(2, 97);
-            this.Grp_DadosPessoais.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Grp_DadosPessoais.Margin = new System.Windows.Forms.Padding(2);
             this.Grp_DadosPessoais.Name = "Grp_DadosPessoais";
-            this.Grp_DadosPessoais.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Grp_DadosPessoais.Padding = new System.Windows.Forms.Padding(2);
             this.Grp_DadosPessoais.Size = new System.Drawing.Size(590, 171);
             this.Grp_DadosPessoais.TabIndex = 1;
             this.Grp_DadosPessoais.TabStop = false;
@@ -350,11 +350,11 @@
             this.Grp_Genero.Controls.Add(this.Rbt_Feminino);
             this.Grp_Genero.Controls.Add(this.Rbt_Masculino);
             this.Grp_Genero.Location = new System.Drawing.Point(219, 124);
-            this.Grp_Genero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Grp_Genero.Margin = new System.Windows.Forms.Padding(2);
             this.Grp_Genero.Name = "Grp_Genero";
-            this.Grp_Genero.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Grp_Genero.Padding = new System.Windows.Forms.Padding(2);
             this.Grp_Genero.Size = new System.Drawing.Size(307, 40);
-            this.Grp_Genero.TabIndex = 5;
+            this.Grp_Genero.TabIndex = 2;
             this.Grp_Genero.TabStop = false;
             this.Grp_Genero.Text = "groupBox1";
             // 
@@ -362,7 +362,7 @@
             // 
             this.Rbt_Outros.AutoSize = true;
             this.Rbt_Outros.Location = new System.Drawing.Point(225, 17);
-            this.Rbt_Outros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Rbt_Outros.Margin = new System.Windows.Forms.Padding(2);
             this.Rbt_Outros.Name = "Rbt_Outros";
             this.Rbt_Outros.Size = new System.Drawing.Size(85, 17);
             this.Rbt_Outros.TabIndex = 2;
@@ -374,7 +374,7 @@
             // 
             this.Rbt_Feminino.AutoSize = true;
             this.Rbt_Feminino.Location = new System.Drawing.Point(119, 17);
-            this.Rbt_Feminino.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Rbt_Feminino.Margin = new System.Windows.Forms.Padding(2);
             this.Rbt_Feminino.Name = "Rbt_Feminino";
             this.Rbt_Feminino.Size = new System.Drawing.Size(85, 17);
             this.Rbt_Feminino.TabIndex = 1;
@@ -386,7 +386,7 @@
             // 
             this.Rbt_Masculino.AutoSize = true;
             this.Rbt_Masculino.Location = new System.Drawing.Point(4, 17);
-            this.Rbt_Masculino.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Rbt_Masculino.Margin = new System.Windows.Forms.Padding(2);
             this.Rbt_Masculino.Name = "Rbt_Masculino";
             this.Rbt_Masculino.Size = new System.Drawing.Size(85, 17);
             this.Rbt_Masculino.TabIndex = 0;
@@ -400,9 +400,9 @@
             this.Grp_TemPai.Controls.Add(this.Chk_NaoTemPai);
             this.Grp_TemPai.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.Grp_TemPai.Location = new System.Drawing.Point(450, 54);
-            this.Grp_TemPai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Grp_TemPai.Margin = new System.Windows.Forms.Padding(2);
             this.Grp_TemPai.Name = "Grp_TemPai";
-            this.Grp_TemPai.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Grp_TemPai.Padding = new System.Windows.Forms.Padding(2);
             this.Grp_TemPai.Size = new System.Drawing.Size(136, 63);
             this.Grp_TemPai.TabIndex = 2;
             this.Grp_TemPai.TabStop = false;
@@ -411,7 +411,7 @@
             // 
             this.Chk_NaoTemPai.AutoSize = true;
             this.Chk_NaoTemPai.Location = new System.Drawing.Point(4, 29);
-            this.Chk_NaoTemPai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Chk_NaoTemPai.Margin = new System.Windows.Forms.Padding(2);
             this.Chk_NaoTemPai.Name = "Chk_NaoTemPai";
             this.Chk_NaoTemPai.Size = new System.Drawing.Size(80, 17);
             this.Chk_NaoTemPai.TabIndex = 0;
@@ -434,11 +434,11 @@
             this.Grp_Endereco.Controls.Add(this.Lbl_Estado);
             this.Grp_Endereco.Controls.Add(this.Lbl_Bairro);
             this.Grp_Endereco.Location = new System.Drawing.Point(2, 270);
-            this.Grp_Endereco.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Grp_Endereco.Margin = new System.Windows.Forms.Padding(2);
             this.Grp_Endereco.Name = "Grp_Endereco";
-            this.Grp_Endereco.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Grp_Endereco.Padding = new System.Windows.Forms.Padding(2);
             this.Grp_Endereco.Size = new System.Drawing.Size(590, 139);
-            this.Grp_Endereco.TabIndex = 2;
+            this.Grp_Endereco.TabIndex = 3;
             this.Grp_Endereco.TabStop = false;
             this.Grp_Endereco.Text = "groupBox1";
             // 
@@ -446,7 +446,7 @@
             // 
             this.Cmb_Estados.FormattingEnabled = true;
             this.Cmb_Estados.Location = new System.Drawing.Point(368, 103);
-            this.Cmb_Estados.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Cmb_Estados.Margin = new System.Windows.Forms.Padding(2);
             this.Cmb_Estados.Name = "Cmb_Estados";
             this.Cmb_Estados.Size = new System.Drawing.Size(219, 21);
             this.Cmb_Estados.TabIndex = 5;
@@ -454,7 +454,7 @@
             // Txt_Cidade
             // 
             this.Txt_Cidade.Location = new System.Drawing.Point(10, 103);
-            this.Txt_Cidade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Txt_Cidade.Margin = new System.Windows.Forms.Padding(2);
             this.Txt_Cidade.Name = "Txt_Cidade";
             this.Txt_Cidade.Size = new System.Drawing.Size(354, 20);
             this.Txt_Cidade.TabIndex = 4;
@@ -478,11 +478,11 @@
             this.Grp_Outros.Controls.Add(this.Txt_Profissao);
             this.Grp_Outros.Controls.Add(this.Txt_RendaFamiliar);
             this.Grp_Outros.Location = new System.Drawing.Point(2, 410);
-            this.Grp_Outros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Grp_Outros.Margin = new System.Windows.Forms.Padding(2);
             this.Grp_Outros.Name = "Grp_Outros";
-            this.Grp_Outros.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Grp_Outros.Padding = new System.Windows.Forms.Padding(2);
             this.Grp_Outros.Size = new System.Drawing.Size(590, 93);
-            this.Grp_Outros.TabIndex = 3;
+            this.Grp_Outros.TabIndex = 4;
             this.Grp_Outros.TabStop = false;
             this.Grp_Outros.Text = "groupBox1";
             // 
@@ -561,7 +561,7 @@
             this.Controls.Add(this.Grp_Endereco);
             this.Controls.Add(this.Grp_DadosPessoais);
             this.Controls.Add(this.Grp_Codigo);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Frm_CadastroCliente_UC";
             this.Size = new System.Drawing.Size(608, 509);
             this.Grp_Codigo.ResumeLayout(false);
