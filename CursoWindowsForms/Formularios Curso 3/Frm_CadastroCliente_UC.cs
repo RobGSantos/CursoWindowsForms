@@ -144,6 +144,7 @@ namespace CursoWindowsForms
 
             if (!F.status)
             {
+                LimparDadosFormulario();
                 MessageBox.Show($"Err: {F.mensagem}",
                     "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -153,6 +154,7 @@ namespace CursoWindowsForms
 
             if (!F.status)
             {
+                LimparDadosFormulario();
                 MessageBox.Show(F.mensagem, "Byte Bank", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -164,6 +166,8 @@ namespace CursoWindowsForms
 
         private void EscreveFormulario(Cliente.Unit C)
         {
+            LimparDadosFormulario();
+            Txt_Codigo.Text = C.Id;
             Txt_NomeCliente.Text = C.Nome;
             Txt_NomeMae.Text = C.NomeMae;
             Chk_NaoTemPai.Checked = C.NaoTemPai;
