@@ -204,7 +204,29 @@ namespace CursoWindowsForms
 
         private void ApagaStripButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Efetuei um clique sobre o botão APAGAR");
+            
+            if (string.IsNullOrEmpty(Txt_Codigo.Text))
+            {
+                MessageBox.Show("O código do cliente está vazio! Insira o código para excluir o formulário desejado!", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            Fichario F = new Fichario(@"C:\Users\robso\OneDrive - rede.sp\Documentos\source\repos\CursoWindowsForms\Fichario");
+
+            if (!F.status)
+            {
+                MessageBox.Show($"Err: {F.mensagem}",
+                    "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            F.Excluir(Txt_Codigo.Text);
+
+            if (!F.status) return; 
+
+            LimparDadosFormulario();
+            MessageBox.Show(F.mensagem, "Byte Bank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
         private void LimpaStripButton_Click(object sender, EventArgs e)

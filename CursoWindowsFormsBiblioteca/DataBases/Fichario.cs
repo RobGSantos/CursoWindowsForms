@@ -85,5 +85,31 @@ namespace CursoWindowsFormsBiblioteca.DataBases
                 return string.Empty;
             }
         }
+
+        public void Excluir(string Id)
+        {
+            status = true;
+
+            try
+            {
+                if (!File.Exists($"{diretorio}\\{Id}.json"))
+                {
+                    status = false;
+                    mensagem = $"Não foi encontrado o formulário do  Identificador {Id}!";
+                    return;
+                }
+                status = true;
+
+                File.Delete($"{diretorio}\\{Id}.json");
+                mensagem = $"Formulário excluído com sucesso. Identificador {Id}";
+
+            }
+            catch (Exception ex)
+            {
+                status = false;
+                mensagem = $"Erro ao buscar o conteúdo do identificador {Id}: {ex.Message}";
+            }
+            return;
+        }
     }
 }
