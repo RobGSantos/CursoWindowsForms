@@ -750,18 +750,6 @@
   <data name="&gt;&gt;Txt_CPF.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="Btn_Busca.Location" type="System.Drawing.Point, System.Drawing">
-    <value>297, 20</value>
-  </data>
-  <data name="Btn_Busca.Size" type="System.Drawing.Size, System.Drawing">
-    <value>136, 32</value>
-  </data>
-  <data name="Btn_Busca.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="Btn_Busca.Text" xml:space="preserve">
-    <value>button1</value>
-  </data>
   <data name="&gt;&gt;Btn_Busca.Name" xml:space="preserve">
     <value>Btn_Busca</value>
   </data>
@@ -807,6 +795,126 @@
   <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="&gt;&gt;Grp_Genero.Name" xml:space="preserve">
+    <value>Grp_Genero</value>
+  </data>
+  <data name="&gt;&gt;Grp_Genero.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Grp_Genero.Parent" xml:space="preserve">
+    <value>Grp_DadosPessoais</value>
+  </data>
+  <data name="&gt;&gt;Grp_Genero.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Grp_TemPai.Name" xml:space="preserve">
+    <value>Grp_TemPai</value>
+  </data>
+  <data name="&gt;&gt;Grp_TemPai.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Grp_TemPai.Parent" xml:space="preserve">
+    <value>Grp_DadosPessoais</value>
+  </data>
+  <data name="&gt;&gt;Grp_TemPai.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Grp_DadosPessoais.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 119</value>
+  </data>
+  <data name="Grp_DadosPessoais.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="Grp_DadosPessoais.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="Grp_DadosPessoais.Size" type="System.Drawing.Size, System.Drawing">
+    <value>787, 210</value>
+  </data>
+  <data name="Grp_DadosPessoais.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="Grp_DadosPessoais.Text" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;Grp_DadosPessoais.Name" xml:space="preserve">
+    <value>Grp_DadosPessoais</value>
+  </data>
+  <data name="&gt;&gt;Grp_DadosPessoais.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Grp_DadosPessoais.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Grp_DadosPessoais.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;Rbt_Outros.Name" xml:space="preserve">
+    <value>Rbt_Outros</value>
+  </data>
+  <data name="&gt;&gt;Rbt_Outros.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Rbt_Outros.Parent" xml:space="preserve">
+    <value>Grp_Genero</value>
+  </data>
+  <data name="&gt;&gt;Rbt_Outros.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Rbt_Feminino.Name" xml:space="preserve">
+    <value>Rbt_Feminino</value>
+  </data>
+  <data name="&gt;&gt;Rbt_Feminino.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Rbt_Feminino.Parent" xml:space="preserve">
+    <value>Grp_Genero</value>
+  </data>
+  <data name="&gt;&gt;Rbt_Feminino.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Rbt_Masculino.Name" xml:space="preserve">
+    <value>Rbt_Masculino</value>
+  </data>
+  <data name="&gt;&gt;Rbt_Masculino.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Rbt_Masculino.Parent" xml:space="preserve">
+    <value>Grp_Genero</value>
+  </data>
+  <data name="&gt;&gt;Rbt_Masculino.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Grp_Genero.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 153</value>
+  </data>
+  <data name="Grp_Genero.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="Grp_Genero.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="Grp_Genero.Size" type="System.Drawing.Size, System.Drawing">
+    <value>409, 49</value>
+  </data>
+  <data name="Grp_Genero.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="Grp_Genero.Text" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;Grp_Genero.Name" xml:space="preserve">
+    <value>Grp_Genero</value>
+  </data>
+  <data name="&gt;&gt;Grp_Genero.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Grp_Genero.Parent" xml:space="preserve">
+    <value>Grp_DadosPessoais</value>
+  </data>
+  <data name="&gt;&gt;Grp_Genero.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="Rbt_Outros.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -897,56 +1005,8 @@
   <data name="&gt;&gt;Rbt_Masculino.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="Grp_Genero.Location" type="System.Drawing.Point, System.Drawing">
-    <value>292, 153</value>
-  </data>
-  <data name="Grp_Genero.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="Grp_Genero.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="Grp_Genero.Size" type="System.Drawing.Size, System.Drawing">
-    <value>409, 49</value>
-  </data>
-  <data name="Grp_Genero.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="Grp_Genero.Text" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;Grp_Genero.Name" xml:space="preserve">
-    <value>Grp_Genero</value>
-  </data>
-  <data name="&gt;&gt;Grp_Genero.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Grp_Genero.Parent" xml:space="preserve">
-    <value>Grp_DadosPessoais</value>
-  </data>
-  <data name="&gt;&gt;Grp_Genero.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="Grp_TemPai.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
-  </data>
-  <data name="Chk_NaoTemPai.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Chk_NaoTemPai.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 36</value>
-  </data>
-  <data name="Chk_NaoTemPai.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="Chk_NaoTemPai.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 20</value>
-  </data>
-  <data name="Chk_NaoTemPai.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="Chk_NaoTemPai.Text" xml:space="preserve">
-    <value>checkBox1</value>
   </data>
   <data name="&gt;&gt;Chk_NaoTemPai.Name" xml:space="preserve">
     <value>Chk_NaoTemPai</value>
@@ -987,35 +1047,35 @@
   <data name="&gt;&gt;Grp_TemPai.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="Grp_DadosPessoais.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 119</value>
+  <data name="Chk_NaoTemPai.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="Grp_DadosPessoais.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="Chk_NaoTemPai.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 36</value>
+  </data>
+  <data name="Chk_NaoTemPai.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
-  <data name="Grp_DadosPessoais.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+  <data name="Chk_NaoTemPai.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 20</value>
   </data>
-  <data name="Grp_DadosPessoais.Size" type="System.Drawing.Size, System.Drawing">
-    <value>787, 210</value>
+  <data name="Chk_NaoTemPai.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="Grp_DadosPessoais.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="Chk_NaoTemPai.Text" xml:space="preserve">
+    <value>checkBox1</value>
   </data>
-  <data name="Grp_DadosPessoais.Text" xml:space="preserve">
-    <value>groupBox1</value>
+  <data name="&gt;&gt;Chk_NaoTemPai.Name" xml:space="preserve">
+    <value>Chk_NaoTemPai</value>
   </data>
-  <data name="&gt;&gt;Grp_DadosPessoais.Name" xml:space="preserve">
-    <value>Grp_DadosPessoais</value>
+  <data name="&gt;&gt;Chk_NaoTemPai.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Grp_DadosPessoais.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;Chk_NaoTemPai.Parent" xml:space="preserve">
+    <value>Grp_TemPai</value>
   </data>
-  <data name="&gt;&gt;Grp_DadosPessoais.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Grp_DadosPessoais.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;Chk_NaoTemPai.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="Cmb_Estados.Location" type="System.Drawing.Point, System.Drawing">
     <value>491, 127</value>
@@ -1246,7 +1306,7 @@
     <value>0, 0</value>
   </data>
   <data name="Tls_Principal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>811, 31</value>
+    <value>811, 27</value>
   </data>
   <data name="Tls_Principal.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -1264,6 +1324,30 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Tls_Principal.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Btn_Busca.Location" type="System.Drawing.Point, System.Drawing">
+    <value>297, 20</value>
+  </data>
+  <data name="Btn_Busca.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 32</value>
+  </data>
+  <data name="Btn_Busca.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="Btn_Busca.Text" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;Btn_Busca.Name" xml:space="preserve">
+    <value>Btn_Busca</value>
+  </data>
+  <data name="&gt;&gt;Btn_Busca.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Btn_Busca.Parent" xml:space="preserve">
+    <value>Grp_Codigo</value>
+  </data>
+  <data name="&gt;&gt;Btn_Busca.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

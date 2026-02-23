@@ -10,6 +10,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Runtime.ConstrainedExecution;
 using System.Security;
 using System.Windows.Forms;
+using System.Runtime.Remoting.Messaging;
 namespace CursoWindowsForms
 {
     public partial class Frm_CadastroCliente_UC : UserControl
@@ -411,8 +412,44 @@ namespace CursoWindowsForms
             List<string> List = new List<string>();
             List = F.BuscarTodos();
 
-            Frm_Busca FFrom = new Frm_Busca();
+            if (!F.status)
+            {
+                MessageBox.Show($"Err: {F.mensagem}",
+                    "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            List<List<string>> ListaBusca = new List<List<string>>();
+
+            Cliente.Unit C = new Cliente.Unit();
+            for (int i = 0; i < List.Count; i++)
+            {
+                C = Cliente.DesSerializedUnit(List[i]);
+                ListaBusca.Add(new List<string> { C.Id, C.Nome });
+            }
+
+
+            Frm_Busca FFrom = new Frm_Busca(ListaBusca);
             FFrom.ShowDialog();
+
+            if (FFrom.DialogResult != DialogResult.OK) return;
+
+            var idSelect = FFrom.idSelect;
+            var clienteJson = F.Buscar(idSelect);
+
+            if (!F.status)
+            {
+                LimparDadosFormulario();
+                MessageBox.Show(F.mensagem, "Byte Bank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            //C = new Cliente.Unit();
+            C = Cliente.DesSerializedUnit(clienteJson);
+            EscreveFormulario(C);
+
         }
+
+        
     }
 }
