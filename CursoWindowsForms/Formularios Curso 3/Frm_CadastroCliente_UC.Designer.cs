@@ -73,6 +73,7 @@
             this.salvarToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.ApagaStripButton = new System.Windows.Forms.ToolStripButton();
             this.LimpaStripButton = new System.Windows.Forms.ToolStripButton();
+            this.Btn_Busca = new System.Windows.Forms.Button();
             this.Grp_Codigo.SuspendLayout();
             this.Grp_DadosPessoais.SuspendLayout();
             this.Grp_Genero.SuspendLayout();
@@ -205,6 +206,7 @@
             // 
             // Grp_Codigo
             // 
+            this.Grp_Codigo.Controls.Add(this.Btn_Busca);
             this.Grp_Codigo.Controls.Add(this.Txt_Codigo);
             resources.ApplyResources(this.Grp_Codigo, "Grp_Codigo");
             this.Grp_Codigo.Name = "Grp_Codigo";
@@ -366,6 +368,13 @@
             this.LimpaStripButton.Name = "LimpaStripButton";
             this.LimpaStripButton.Click += new System.EventHandler(this.LimpaStripButton_Click);
             // 
+            // Btn_Busca
+            // 
+            resources.ApplyResources(this.Btn_Busca, "Btn_Busca");
+            this.Btn_Busca.Name = "Btn_Busca";
+            this.Btn_Busca.UseVisualStyleBackColor = true;
+            this.Btn_Busca.Click += new System.EventHandler(this.Btn_Busca_Click);
+            // 
             // Frm_CadastroCliente_UC
             // 
             resources.ApplyResources(this, "$this");
@@ -440,5 +449,6 @@
         private System.Windows.Forms.ToolStripButton salvarToolStripButton;
         private System.Windows.Forms.ToolStripButton ApagaStripButton;
         private System.Windows.Forms.ToolStripButton LimpaStripButton;
+        private System.Windows.Forms.Button Btn_Busca;
     }
 }

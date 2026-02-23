@@ -85,6 +85,31 @@ namespace CursoWindowsFormsBiblioteca.DataBases
                 return string.Empty;
             }
         }
+        public List<string> BuscarTodos()
+        {
+            status = true;
+            List<string> list = new List<string>();
+
+            try
+            {
+
+                var Arquivos = Directory.GetFiles(diretorio, "*.json");
+                for(int i = 0; i < Arquivos.Length; i++)
+                {
+                    var jsonUnit = File.ReadAllText(Arquivos[i]);
+                    list.Add(jsonUnit);
+                }
+
+                return list;
+
+            }
+            catch (Exception ex)
+            {
+                status = false;
+                mensagem = $"Erro ao buscar o conteúdo do identificador: {ex.Message}";
+                return list;
+            }
+        }
 
         public void Excluir(string Id)
         {
@@ -109,7 +134,32 @@ namespace CursoWindowsFormsBiblioteca.DataBases
                 status = false;
                 mensagem = $"Erro ao buscar o conteúdo do identificador {Id}: {ex.Message}";
             }
-            return;
+        }
+
+        public void Alterar(string Id, string clienteJson)
+        {
+            try
+            {
+                status = true;
+
+                if (!File.Exists($"{diretorio}\\{Id}.json"))
+                {
+                    status = false;
+                    mensagem = $"Alterar não permitida. O Identificador {Id} não existe na pasta";
+                    return;
+                }
+
+                status = true;
+                File.Delete($"{diretorio}\\{Id}.json");
+                File.WriteAllText($"{diretorio}\\{Id}.json", clienteJson);
+                mensagem = $"Alterar efetuada com sucesso. Identificador {Id}";
+
+            }
+            catch (Exception ex)
+            {
+                status = false;
+                mensagem = $"Conexão com o fichário gerou erro: {ex.Message}";
+            }
         }
     }
 }

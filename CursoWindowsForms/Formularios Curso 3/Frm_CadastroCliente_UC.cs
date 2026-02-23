@@ -39,6 +39,7 @@ namespace CursoWindowsForms
             Lbl_CPF.Text = "CPF";
             Lbl_Cidade.Text = "Cidade";
             Chk_NaoTemPai.Text = "Pai Desconhecido";
+            Btn_Busca.Text = "Buscar";
 
             Cmb_Estados.Items.Clear();
             Cmb_Estados.Items.Add("Acre (AC)");
@@ -83,6 +84,7 @@ namespace CursoWindowsForms
         {
             Txt_NomePai.Enabled = !Chk_NaoTemPai.Checked;
             Lbl_NomePai.Enabled = !Chk_NaoTemPai.Checked;
+            Txt_NomePai.Text = Chk_NaoTemPai.Checked ? string.Empty : Txt_NomePai.Text;
         }
 
         private void novoToolStripButton_Click(object sender, EventArgs e)
@@ -95,7 +97,7 @@ namespace CursoWindowsForms
                 C.ValidaClasse();
                 C.ValidaComplemento();
 
-                Fichario F = new Fichario(@"C:\Users\robso\OneDrive - rede.sp\Documentos\source\repos\CursoWindowsForms\Fichario");
+                Fichario F = new Fichario(@"C:\Users\d918383\OneDrive - rede.sp\Documentos\source\repos\CursoWindowsForms\Fichario");
 
                 if (!F.status)
                 {
@@ -140,7 +142,7 @@ namespace CursoWindowsForms
                 return;
             }
 
-            Fichario F = new Fichario(@"C:\Users\robso\OneDrive - rede.sp\Documentos\source\repos\CursoWindowsForms\Fichario");
+            Fichario F = new Fichario(@"C:\Users\d918383\OneDrive - rede.sp\Documentos\source\repos\CursoWindowsForms\Fichario");
 
             if (!F.status)
             {
@@ -171,7 +173,7 @@ namespace CursoWindowsForms
             Txt_NomeCliente.Text = C.Nome;
             Txt_NomeMae.Text = C.NomeMae;
             Chk_NaoTemPai.Checked = C.NaoTemPai;
-            Txt_NomePai.Text = C.NomePai;
+            Txt_NomePai.Text = Chk_NaoTemPai.Checked ? string.Empty : C.NomePai;
             Txt_CPF.Text = C.CPF;
             Rbt_Masculino.Checked = C.Genero == 0;
             Rbt_Feminino.Checked = C.Genero == 1;
@@ -199,7 +201,54 @@ namespace CursoWindowsForms
 
         private void salvarToolStripButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Efetuei um clique sobre o botão SALVAR");
+            if (string.IsNullOrEmpty(Txt_Codigo.Text))
+            {
+                MessageBox.Show("O código do cliente está vazio! Insira o código para abrir o formulário desejado!", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                Cliente.Unit C = new Cliente.Unit();
+
+                C = LeituraFormulario();
+                C.ValidaClasse();
+                C.ValidaComplemento();
+
+                Fichario F = new Fichario(@"C:\Users\d918383\OneDrive - rede.sp\Documentos\source\repos\CursoWindowsForms\Fichario");
+
+                if (!F.status)
+                {
+                    MessageBox.Show($"Err: {F.mensagem}",
+                    "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string clienteJson = Cliente.SerializedUnit(C);
+
+                F.Alterar(C.Id, clienteJson);
+
+                if (!F.status)
+                {
+                    MessageBox.Show($"Err: {F.mensagem}",
+                    "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                MessageBox.Show($"{F.mensagem}",
+                    "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (ValidationException Ex)
+            {
+                MessageBox.Show(Ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
         }
 
         private void ApagaStripButton_Click(object sender, EventArgs e)
@@ -211,7 +260,7 @@ namespace CursoWindowsForms
                 return;
             }
 
-            Fichario F = new Fichario(@"C:\Users\robso\OneDrive - rede.sp\Documentos\source\repos\CursoWindowsForms\Fichario");
+            Fichario F = new Fichario(@"C:\Users\d918383\OneDrive - rede.sp\Documentos\source\repos\CursoWindowsForms\Fichario");
 
             if (!F.status)
             {
@@ -219,6 +268,17 @@ namespace CursoWindowsForms
                     "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            var clienteJson = F.Buscar(Txt_Codigo.Text);
+            Cliente.Unit C = new Cliente.Unit();
+            C = Cliente.DesSerializedUnit(clienteJson);
+            EscreveFormulario(C);
+
+            Frm_Questao questao = new Frm_Questao("Ponto_de_Interrogacao_Imagem",
+                "Você quer realmente excluir o formulário do cliente?");
+
+            questao.ShowDialog();
+
+            if (!(questao.DialogResult == DialogResult.Yes)) return;
 
             F.Excluir(Txt_Codigo.Text);
 
@@ -240,9 +300,9 @@ namespace CursoWindowsForms
             {
                 Id = Txt_Codigo.Text,
                 Nome = Txt_NomeCliente.Text,
-                NomePai = Txt_NomePai.Text,
-                NomeMae = Txt_NomeMae.Text,
-                NaoTemPai = Chk_NaoTemPai.Checked
+                NaoTemPai = Chk_NaoTemPai.Checked,
+                NomePai = Chk_NaoTemPai.Checked ? string.Empty : Txt_NomePai.Text,
+                NomeMae = Txt_NomeMae.Text
             };
 
             if (Rbt_Masculino.Checked) C.Genero = 0;
@@ -337,5 +397,22 @@ namespace CursoWindowsForms
             LimpaDadosEndereco(false);
         }
 
+        private void Btn_Busca_Click(object sender, EventArgs e)
+        {
+            Fichario F = new Fichario(@"C:\Users\d918383\OneDrive - rede.sp\Documentos\source\repos\CursoWindowsForms\Fichario");
+
+            if (!F.status)
+            {
+                MessageBox.Show($"Err: {F.mensagem}",
+                    "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            List<string> List = new List<string>();
+            List = F.BuscarTodos();
+
+            Frm_Busca FFrom = new Frm_Busca();
+            FFrom.ShowDialog();
+        }
     }
 }
