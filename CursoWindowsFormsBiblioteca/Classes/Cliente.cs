@@ -1,4 +1,5 @@
 ﻿
+using CursoWindowsFormsBiblioteca.DataBases;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -97,7 +98,39 @@ namespace CursoWindowsFormsBiblioteca.Classes
                 bool validaCPF = Cls_Uteis.Valida(CPF);
             }
 
+            #region "CRUD do Fichario"
+
+            public void IncluirFichario(string conexao)
+            {
+                string clienteJson = SerializedUnit(this);
+                Fichario F = new Fichario(conexao);
+
+                if (!F.status) throw new Exception(F.mensagem);
+
+                F.Incluir(Id, clienteJson);
+
+                if (!F.status) throw new Exception(F.mensagem);
+
+            }
+
+            public Unit BuscarFichario(string conexao, string vId)
+            {
+                Fichario F = new Fichario(conexao);
+                if (!F.status) throw new Exception(F.mensagem);
+
+                var clienteJson = F.Buscar(vId);
+                if (!F.status) throw new Exception(F.mensagem);
+
+                var cliente = DesSerializedUnit(clienteJson);
+
+                return cliente;
+
+            }
+
+            #endregion
+
         }
+
 
         public class List
         {

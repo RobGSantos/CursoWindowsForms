@@ -54,6 +54,7 @@
             this.Lbl_CPF = new System.Windows.Forms.Label();
             this.Txt_CPF = new System.Windows.Forms.TextBox();
             this.Grp_Codigo = new System.Windows.Forms.GroupBox();
+            this.Btn_Busca = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.Grp_DadosPessoais = new System.Windows.Forms.GroupBox();
             this.Grp_Genero = new System.Windows.Forms.GroupBox();
@@ -73,7 +74,6 @@
             this.salvarToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.ApagaStripButton = new System.Windows.Forms.ToolStripButton();
             this.LimpaStripButton = new System.Windows.Forms.ToolStripButton();
-            this.Btn_Busca = new System.Windows.Forms.Button();
             this.Grp_Codigo.SuspendLayout();
             this.Grp_DadosPessoais.SuspendLayout();
             this.Grp_Genero.SuspendLayout();
@@ -211,6 +211,13 @@
             resources.ApplyResources(this.Grp_Codigo, "Grp_Codigo");
             this.Grp_Codigo.Name = "Grp_Codigo";
             this.Grp_Codigo.TabStop = false;
+            // 
+            // Btn_Busca
+            // 
+            resources.ApplyResources(this.Btn_Busca, "Btn_Busca");
+            this.Btn_Busca.Name = "Btn_Busca";
+            this.Btn_Busca.UseVisualStyleBackColor = true;
+            this.Btn_Busca.Click += new System.EventHandler(this.Btn_Busca_Click);
             // 
             // Grp_DadosPessoais
             // 
@@ -367,13 +374,6 @@
             resources.ApplyResources(this.LimpaStripButton, "LimpaStripButton");
             this.LimpaStripButton.Name = "LimpaStripButton";
             this.LimpaStripButton.Click += new System.EventHandler(this.LimpaStripButton_Click);
-            // 
-            // Btn_Busca
-            // 
-            resources.ApplyResources(this.Btn_Busca, "Btn_Busca");
-            this.Btn_Busca.Name = "Btn_Busca";
-            this.Btn_Busca.UseVisualStyleBackColor = true;
-            this.Btn_Busca.Click += new System.EventHandler(this.Btn_Busca_Click);
             // 
             // Frm_CadastroCliente_UC
             // 
