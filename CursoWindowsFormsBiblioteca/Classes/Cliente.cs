@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace CursoWindowsFormsBiblioteca.Classes
@@ -127,6 +128,26 @@ namespace CursoWindowsFormsBiblioteca.Classes
 
             }
 
+            public void AlterarFormulario(string conexao)
+            {
+                Fichario F = new Fichario(conexao);
+                if (!F.status) throw new Exception(F.mensagem);
+
+                string clienteJson = SerializedUnit(this);
+
+                F.Alterar(Id, clienteJson);
+                if (!F.status) throw new Exception(F.mensagem);
+            }
+
+            public void ApagarFormulario(string conexao)
+            {
+                Fichario F = new Fichario(conexao);
+                if (!F.status) throw new Exception(F.mensagem);
+
+                F.Excluir(Id);
+                if (!F.status) throw new Exception(F.mensagem);
+
+            }
             #endregion
 
         }

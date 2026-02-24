@@ -152,7 +152,6 @@ namespace CursoWindowsForms
 
                 Cliente.Unit C = new Cliente.Unit();
                 C = C.BuscarFichario(@"C:\Users\d918383\OneDrive - rede.sp\Documentos\source\repos\CursoWindowsForms\Fichario", Txt_Codigo.Text);
-                MessageBox.Show(C.Estado);
                 EscreveFormulario(C);
             }
             catch(Exception Ex)
@@ -161,6 +160,7 @@ namespace CursoWindowsForms
                 MessageBox.Show(Ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            #region "Solucao 01"
             //Fichario F = new Fichario(@"C:\Users\d918383\OneDrive - rede.sp\Documentos\source\repos\CursoWindowsForms\Fichario");
 
             //if (!F.status)
@@ -183,6 +183,7 @@ namespace CursoWindowsForms
             //Cliente.Unit C = new Cliente.Unit();
             //C = Cliente.DesSerializedUnit(clienteJson);
             //EscreveFormulario(C);
+            #endregion
         }
 
         private void EscreveFormulario(Cliente.Unit C)
@@ -233,28 +234,31 @@ namespace CursoWindowsForms
                 C = LeituraFormulario();
                 C.ValidaClasse();
                 C.ValidaComplemento();
+                C.AlterarFormulario(@"C:\Users\d918383\OneDrive - rede.sp\Documentos\source\repos\CursoWindowsForms\Fichario");
 
-                Fichario F = new Fichario(@"C:\Users\d918383\OneDrive - rede.sp\Documentos\source\repos\CursoWindowsForms\Fichario");
+                #region "Solução 01"
+                //Fichario F = new Fichario(@"C:\Users\d918383\OneDrive - rede.sp\Documentos\source\repos\CursoWindowsForms\Fichario");
 
-                if (!F.status)
-                {
-                    MessageBox.Show($"Err: {F.mensagem}",
-                    "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+                //if (!F.status)
+                //{
+                //    MessageBox.Show($"Err: {F.mensagem}",
+                //    "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    return;
+                //}
 
-                string clienteJson = Cliente.SerializedUnit(C);
+                //string clienteJson = Cliente.SerializedUnit(C);
 
-                F.Alterar(C.Id, clienteJson);
+                //F.Alterar(C.Id, clienteJson);
 
-                if (!F.status)
-                {
-                    MessageBox.Show($"Err: {F.mensagem}",
-                    "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+                //if (!F.status)
+                //{
+                //    MessageBox.Show($"Err: {F.mensagem}",
+                //    "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    return;
+                //}
+                #endregion
 
-                MessageBox.Show($"{F.mensagem}",
+                MessageBox.Show($"Formulário alterado com sucesso. Identificador: {C.Id}",
                     "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (ValidationException Ex)
@@ -272,46 +276,55 @@ namespace CursoWindowsForms
 
         private void ApagaStripButton_Click(object sender, EventArgs e)
         {
-            
-            if (string.IsNullOrEmpty(Txt_Codigo.Text))
+            try
             {
-                MessageBox.Show("O código do cliente está vazio! Insira o código para excluir o formulário desejado!", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (string.IsNullOrEmpty(Txt_Codigo.Text))
+                {
+                    MessageBox.Show("O código do cliente está vazio! Insira o código para excluir o formulário desejado!", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                Cliente.Unit C = new Cliente.Unit();
+                C = C.BuscarFichario(@"C:\Users\d918383\OneDrive - rede.sp\Documentos\source\repos\CursoWindowsForms\Fichario", Txt_Codigo.Text);
+                EscreveFormulario(C);
+
+                #region "Solucao 1"
+                //Fichario F = new Fichario(@"C:\Users\d918383\OneDrive - rede.sp\Documentos\source\repos\CursoWindowsForms\Fichario");
+
+                //if (!F.status)
+                //{
+                //    MessageBox.Show($"Err: {F.mensagem}",
+                //        "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    return;
+                //}
+                //var clienteJson = F.Buscar(Txt_Codigo.Text);
+                //Cliente.Unit C = new Cliente.Unit();
+                //C = Cliente.DesSerializedUnit(clienteJson);
+                //EscreveFormulario(C);
+                #endregion
+
+                Frm_Questao questao = new Frm_Questao("Ponto_de_Interrogacao_Imagem",
+                    "Você quer realmente excluir o formulário do cliente?");
+
+                questao.ShowDialog();
+
+                if (questao.DialogResult != DialogResult.Yes) return;
+
+                C.ApagarFormulario(@"C:\Users\d918383\OneDrive - rede.sp\Documentos\source\repos\CursoWindowsForms\Fichario");
+
+                LimparDadosFormulario();
+                MessageBox.Show($"Formulário com identificador {C.Id} excluído com sucesso!", "Byte Bank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-            Fichario F = new Fichario(@"C:\Users\d918383\OneDrive - rede.sp\Documentos\source\repos\CursoWindowsForms\Fichario");
-
-            if (!F.status)
-            {
-                MessageBox.Show($"Err: {F.mensagem}",
-                    "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            var clienteJson = F.Buscar(Txt_Codigo.Text);
-            Cliente.Unit C = new Cliente.Unit();
-            C = Cliente.DesSerializedUnit(clienteJson);
-            EscreveFormulario(C);
-
-            Frm_Questao questao = new Frm_Questao("Ponto_de_Interrogacao_Imagem",
-                "Você quer realmente excluir o formulário do cliente?");
-
-            questao.ShowDialog();
-
-            if (!(questao.DialogResult == DialogResult.Yes)) return;
-
-            F.Excluir(Txt_Codigo.Text);
-
-            if (!F.status) return; 
-
-            LimparDadosFormulario();
-            MessageBox.Show(F.mensagem, "Byte Bank", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
         }
 
         private void LimpaStripButton_Click(object sender, EventArgs e)
         {
             LimparDadosFormulario();
-            
         }
         Cliente.Unit LeituraFormulario()
         {
