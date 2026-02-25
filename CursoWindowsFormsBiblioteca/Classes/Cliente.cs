@@ -160,7 +160,71 @@ namespace CursoWindowsFormsBiblioteca.Classes
                 return todosJson;
 
             }
-            
+
+            #endregion
+
+            #region "CRUD do Fichario LocalDB"
+
+            public void IncluirFicharioDB(string tabela)
+            {
+                string clienteJson = SerializedUnit(this);
+                FicharioDB F = new FicharioDB(tabela);
+
+                if (!F.status) throw new Exception(F.mensagem);
+
+                F.Incluir(Id, clienteJson);
+
+                if (!F.status) throw new Exception(F.mensagem);
+
+            }
+
+            public Unit BuscarFicharioDB(string tabela, string vId)
+            {
+                FicharioDB F = new FicharioDB(tabela);
+                if (!F.status) throw new Exception(F.mensagem);
+
+                var clienteJson = F.Buscar(vId);
+                if (!F.status) throw new Exception(F.mensagem);
+
+                var cliente = DesSerializedUnit(clienteJson);
+
+                return cliente;
+
+            }
+
+            public void AlterarFormularioDB(string tabela)
+            {
+                FicharioDB F = new FicharioDB(tabela);
+                if (!F.status) throw new Exception(F.mensagem);
+
+                string clienteJson = SerializedUnit(this);
+
+                F.Alterar(Id, clienteJson);
+                if (!F.status) throw new Exception(F.mensagem);
+            }
+
+            public void ApagarFormularioDB(string tabela)
+            {
+                FicharioDB F = new FicharioDB(tabela);
+                if (!F.status) throw new Exception(F.mensagem);
+
+                F.Excluir(Id);
+                if (!F.status) throw new Exception(F.mensagem);
+
+            }
+
+            public List<string> ListaFicharioDB(string tabela)
+            {
+                FicharioDB F = new FicharioDB(tabela);
+                if (!F.status) throw new Exception(F.mensagem);
+
+                List<string> todosJson = F.BuscarTodos();
+                if (!F.status) throw new Exception(F.mensagem);
+
+                return todosJson;
+
+            }
+
             #endregion
 
         }
