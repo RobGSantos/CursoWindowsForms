@@ -148,10 +148,22 @@ namespace CursoWindowsFormsBiblioteca.Classes
                 if (!F.status) throw new Exception(F.mensagem);
 
             }
+
+            public List<string> ListaFichario(string conexao)
+            {
+                Fichario F = new Fichario(conexao);
+                if (!F.status) throw new Exception(F.mensagem);
+
+                List<string> todosJson = F.BuscarTodos();
+                if (!F.status) throw new Exception(F.mensagem);
+
+                return todosJson;
+
+            }
+            
             #endregion
 
         }
-
 
         public class List
         {

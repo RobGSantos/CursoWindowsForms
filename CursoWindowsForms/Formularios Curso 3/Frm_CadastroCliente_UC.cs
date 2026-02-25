@@ -102,6 +102,7 @@ namespace CursoWindowsForms
                 MessageBox.Show($"OK. Identificador incluído com sucesso {C.Id}",
                     "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                #region "Solucao 1"
                 //Fichario F = new Fichario();
 
                 //if (!F.status)
@@ -124,6 +125,7 @@ namespace CursoWindowsForms
 
                 //MessageBox.Show($"{F.mensagem}",
                 //    "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                #endregion
             }
             catch (ValidationException Ex)
             {
@@ -431,56 +433,69 @@ namespace CursoWindowsForms
 
         private void Btn_Busca_Click(object sender, EventArgs e)
         {
-            Fichario F = new Fichario(@"C:\Users\d918383\OneDrive - rede.sp\Documentos\source\repos\CursoWindowsForms\Fichario");
+            #region "Solução 1"
+            //Fichario F = new Fichario(@"C:\Users\d918383\OneDrive - rede.sp\Documentos\source\repos\CursoWindowsForms\Fichario");
 
-            if (!F.status)
+            //if (!F.status)
+            //{
+            //    MessageBox.Show($"Err: {F.mensagem}",
+            //        "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}
+
+            //List<string> List = new List<string>();
+            //List = F.BuscarTodos();
+
+            //for (int i = 0; i < lista.Count; i++)
+            //{
+            //    C = Cliente.DesSerializedUnit(List[i]);
+            //    ListaBusca.Add(new List<string> { C.Id, C.Nome });
+            //}
+            //var idSelect = FFrom.idSelect;
+            //var clienteJson = F.Buscar(idSelect);
+            //if (!F.status)
+            //{
+            //    MessageBox.Show($"Err: {F.mensagem}",
+            //        "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}
+            #endregion
+
+            try
             {
-                MessageBox.Show($"Err: {F.mensagem}",
-                    "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Cliente.Unit C = new Cliente.Unit();
+                var lista = C.ListaFichario(@"C:\Users\d918383\OneDrive - rede.sp\Documentos\source\repos\CursoWindowsForms\Fichario");
+
+                var listaBusca = new List<List<string>>();
+                for (int i = 0; i < lista.Count; i++)
+                {
+                    C = Cliente.DesSerializedUnit(lista[i]);
+                    listaBusca.Add(new List<string> { C.Id, C.Nome });
+                }
+
+                
+                if (listaBusca.Count <= 0)
+                {
+                    MessageBox.Show("Base de dados está vazia. Nenhum formulário foi encontrado!", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                
+                Frm_Busca FFrom = new Frm_Busca(listaBusca);
+                FFrom.ShowDialog();
+
+                if (FFrom.DialogResult != DialogResult.OK) return;
+
+                var idSelect = FFrom.idSelect;
+                C = C.BuscarFichario(@"C:\Users\d918383\OneDrive - rede.sp\Documentos\source\repos\CursoWindowsForms\Fichario", idSelect);
+
+                EscreveFormulario(C);
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-            List<string> List = new List<string>();
-            List = F.BuscarTodos();
-
-            if (!F.status)
-            {
-                MessageBox.Show($"Err: {F.mensagem}",
-                    "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            List<List<string>> ListaBusca = new List<List<string>>();
-
-            Cliente.Unit C = new Cliente.Unit();
-            for (int i = 0; i < List.Count; i++)
-            {
-                C = Cliente.DesSerializedUnit(List[i]);
-                ListaBusca.Add(new List<string> { C.Id, C.Nome });
-            }
-
-
-            Frm_Busca FFrom = new Frm_Busca(ListaBusca);
-            FFrom.ShowDialog();
-
-            if (FFrom.DialogResult != DialogResult.OK) return;
-
-            var idSelect = FFrom.idSelect;
-            var clienteJson = F.Buscar(idSelect);
-
-            if (!F.status)
-            {
-                LimparDadosFormulario();
-                MessageBox.Show(F.mensagem, "Byte Bank", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            //C = new Cliente.Unit();
-            C = Cliente.DesSerializedUnit(clienteJson);
-            EscreveFormulario(C);
 
         }
-
-        
     }
 }
