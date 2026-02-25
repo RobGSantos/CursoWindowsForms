@@ -64,6 +64,8 @@
     <Compile Include="Classes\Cliente.cs" />
     <Compile Include="Cls_Uteis.cs" />
     <Compile Include="DataBases\Fichario.cs" />
+    <Compile Include="DataBases\FicharioDB.cs" />
+    <Compile Include="DataBases\LocalDBClass.cs" />
     <Compile Include="FicharioDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
