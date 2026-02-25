@@ -92,9 +92,9 @@ namespace CursoWindowsFormsBiblioteca.Classes
             public void ValidaComplemento()
             {
                 if (NomePai == NomeMae)
-                    throw new Exception("Nome do Pai e da Mãe não podem ser iguais");
+                    throw new Exception("Nome do Pai e da Mãe não podem ser iguais.");
 
-                if (NaoTemPai == false && NomePai == "") throw new Exception("Nome do Pai não pode estar vazio quando a propriedade Pai Desconhecido não estiver marcada");
+                if (NaoTemPai == false && NomePai == "") throw new Exception("Nome do Pai não pode estar vazio quando a propriedade Pai Desconhecido não estiver marcada.");
                 
                 bool validaCPF = Cls_Uteis.Valida(CPF);
             }
