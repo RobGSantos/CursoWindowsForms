@@ -15,13 +15,14 @@ namespace CursoWindowsFormsBiblioteca.DataBases
             try
             {
                 stringConn = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DataBases\Fichario.mdf;Integrated Security=True";
+                
                 connDB = new SqlConnection(stringConn);
                 connDB.Open();
 
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                throw new Exception("Conexão falhou" + ex.Message + ex.StackTrace);
             }
         }
 
@@ -34,12 +35,13 @@ namespace CursoWindowsFormsBiblioteca.DataBases
                 {
                     CommandTimeout = 0
                 };
-
-                var myReader = myCommand.ExecuteReader();
+                myCommand.Connection = connDB;
+                SqlDataReader myReader = myCommand.ExecuteReader();
                 dt.Load(myReader);
             }
             catch (Exception ex)
             {
+
                 throw ex;
             }
 

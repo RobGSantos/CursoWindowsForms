@@ -19,6 +19,7 @@ namespace CursoWindowsFormsBiblioteca.DataBases
             try
             {
                 db = new LocalDBClass();
+                
                 mensagem = "Conexão com a Tabela criada com sucesso!";
 
             }
@@ -33,6 +34,7 @@ namespace CursoWindowsFormsBiblioteca.DataBases
         public void Incluir(string Id, string jsonUnit)
         {
             status = true;
+            tabela = "CLIENTE";
             try
             {
                 var sql = $@"INSERT INTO [{tabela}](Id, JSON) VALUES ('""{Id}""', '""{jsonUnit}""')";
@@ -50,7 +52,7 @@ namespace CursoWindowsFormsBiblioteca.DataBases
         public string Buscar(string Id)
         {
             status = true;
-
+            tabela = "CLIENTE";
             try
             {
 
@@ -78,7 +80,7 @@ namespace CursoWindowsFormsBiblioteca.DataBases
         {
             status = true;
             List<string> list = new List<string>();
-
+            tabela = "CLIENTE";
             try
             {
                 var sql = $@"SELECT JSON FROM [{tabela}]";
@@ -106,7 +108,7 @@ namespace CursoWindowsFormsBiblioteca.DataBases
         public void Excluir(string Id)
         {
             status = true;
-
+            tabela = "CLIENTE";
             try
             {
                 var sql = $@"SELECT COUNT(*) AS [CONTAGEM] FROM [{tabela}] WHERE ID = '""{Id}""'";
@@ -129,7 +131,7 @@ namespace CursoWindowsFormsBiblioteca.DataBases
         public void Alterar(string Id, string clienteJson)
         {
             status = true;
-
+            tabela = "CLIENTE";
             try
             {
                 var sql = $@"SELECT COUNT(*) AS [CONTAGEM] FROM [{tabela}] WHERE ID = '""{Id}""'";
