@@ -221,6 +221,7 @@ namespace CursoWindowsForms
 
             Txt_CEP.Text = string.Empty;
             Txt_Logradouro.Text = string.Empty;
+            Txt_Complemento.Text = string.Empty;
             Txt_Bairro.Text = string.Empty;
             Txt_Cidade.Text = string.Empty;
             Cmb_Estados.SelectedIndex = -1;
@@ -619,7 +620,7 @@ namespace CursoWindowsForms
 
         private void Btn_Busca_Click(object sender, EventArgs e)
         {
-            
+                    
             try
             {
                 Cliente.Unit C = new Cliente.Unit();

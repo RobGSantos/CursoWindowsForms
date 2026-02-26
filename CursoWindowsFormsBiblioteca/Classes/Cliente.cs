@@ -168,10 +168,13 @@ namespace CursoWindowsFormsBiblioteca.Classes
             public void IncluirFicharioDB(string tabela)
             {
                 string clienteJson = SerializedUnit(this);
-                FicharioDB F = new FicharioDB(tabela);
 
+                FicharioDB F = new FicharioDB(tabela);
                 if (!F.status) throw new Exception(F.mensagem);
 
+                var buscaID = F.Buscar(Id);
+                if (!string.IsNullOrEmpty(buscaID)) throw new Exception($"Já existe um registro com o identificador {Id}");
+ 
                 F.Incluir(Id, clienteJson);
 
                 if (!F.status) throw new Exception(F.mensagem);
@@ -185,7 +188,8 @@ namespace CursoWindowsFormsBiblioteca.Classes
 
                 var clienteJson = F.Buscar(vId);
                 if (!F.status) throw new Exception(F.mensagem);
-
+                Console.WriteLine(clienteJson);
+                clienteJson = clienteJson.Replace("\"{{", "{{").Replace("}}\"", "}}");
                 var cliente = DesSerializedUnit(clienteJson);
 
                 return cliente;

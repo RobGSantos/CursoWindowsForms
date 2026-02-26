@@ -16,6 +16,7 @@ namespace CursoWindowsFormsBiblioteca.DataBases
         public FicharioDB(string pTabela)
         {
             status = true;
+            tabela = pTabela;
             try
             {
                 db = new LocalDBClass();
@@ -34,12 +35,21 @@ namespace CursoWindowsFormsBiblioteca.DataBases
         public void Incluir(string Id, string jsonUnit)
         {
             status = true;
-            tabela = "CLIENTE";
             try
             {
-                var sql = $@"INSERT INTO [{tabela}](Id, JSON) VALUES ('""{Id}""', '""{jsonUnit}""')";
+                var sql = $"INSERT INTO [{tabela}](Id, JSON) VALUES ('{Id}', '{jsonUnit}')";
                 db.SQLCommand(sql);
                 mensagem = $"Inclusão efetuada com sucesso. Identificador {Id}";
+
+                sql = $@"SELECT JSON FROM [{tabela}] WHERE ID = '{Id}'";
+                var dt = db.SQLQuery(sql);
+
+                if (dt.Rows.Count == 0)
+                    throw new Exception($"Nenhum registro com o identificador {Id} foi localizado!");
+
+                jsonUnit = dt.Rows[0]["JSON"].ToString();
+                mensagem += $"\n {jsonUnit}";
+
 
             }
             catch (Exception ex)
@@ -52,11 +62,10 @@ namespace CursoWindowsFormsBiblioteca.DataBases
         public string Buscar(string Id)
         {
             status = true;
-            tabela = "CLIENTE";
             try
             {
 
-                var sql = $@"SELECT JSON FROM [{tabela}] WHERE ID = '""{Id}""'";
+                var sql = $@"SELECT JSON FROM [{tabela}] WHERE ID = '{Id}'";
                 var dt = db.SQLQuery(sql);
 
                 if (dt.Rows.Count == 0)
@@ -80,7 +89,6 @@ namespace CursoWindowsFormsBiblioteca.DataBases
         {
             status = true;
             List<string> list = new List<string>();
-            tabela = "CLIENTE";
             try
             {
                 var sql = $@"SELECT JSON FROM [{tabela}]";
@@ -108,16 +116,15 @@ namespace CursoWindowsFormsBiblioteca.DataBases
         public void Excluir(string Id)
         {
             status = true;
-            tabela = "CLIENTE";
             try
             {
-                var sql = $@"SELECT COUNT(*) AS [CONTAGEM] FROM [{tabela}] WHERE ID = '""{Id}""'";
+                var sql = $@"SELECT COUNT(*) AS [CONTAGEM] FROM [{tabela}] WHERE ID = '{Id}'";
                 var dt = db.SQLQuery(sql);
 
                 if (dt.Rows[0]["CONTAGEM"].Equals("0"))
                     throw new Exception($"Nenhum registro com o identificador {Id} foi localizado!");
 
-                sql = $@"DELETE FROM [{tabela}] WHERE ID = '""{Id}""'";
+                sql = $@"DELETE FROM [{tabela}] WHERE ID = '{Id}'";
                 db.SQLCommand(sql);
                 mensagem = $"Formulário excluído com sucesso. Identificador {Id}";
 
@@ -134,13 +141,13 @@ namespace CursoWindowsFormsBiblioteca.DataBases
             tabela = "CLIENTE";
             try
             {
-                var sql = $@"SELECT COUNT(*) AS [CONTAGEM] FROM [{tabela}] WHERE ID = '""{Id}""'";
+                var sql = $@"SELECT COUNT(*) AS [CONTAGEM] FROM [{tabela}] WHERE ID = '{Id}'";
                 var dt = db.SQLQuery(sql);
 
                 if (dt.Rows[0]["CONTAGEM"].Equals("0"))
                     throw new Exception($"Nenhum registro com o identificador {Id} foi localizado!");
 
-                sql = $@"UPDATE [{tabela}] SET JSON = '""{clienteJson}""' WHERE ID = '""{Id}""'";
+                sql = $@"UPDATE [{tabela}] SET JSON = '{clienteJson}' WHERE ID = '{Id}'";
                 db.SQLCommand(sql);
 
                 mensagem = $"Alteração efetuada com sucesso. Identificador {Id}";

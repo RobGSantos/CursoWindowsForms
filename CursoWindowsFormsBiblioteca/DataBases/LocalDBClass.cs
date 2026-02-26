@@ -14,7 +14,7 @@ namespace CursoWindowsFormsBiblioteca.DataBases
         {
             try
             {
-                stringConn = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\DataBases\Fichario.mdf;Integrated Security=True";
+                stringConn = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\d918383\OneDrive - rede.sp\Documentos\source\repos\CursoWindowsForms\CursoWindowsFormsBiblioteca\DataBases\Fichario.mdf"";Integrated Security=True";
                 
                 connDB = new SqlConnection(stringConn);
                 connDB.Open();
@@ -38,6 +38,7 @@ namespace CursoWindowsFormsBiblioteca.DataBases
                 myCommand.Connection = connDB;
                 SqlDataReader myReader = myCommand.ExecuteReader();
                 dt.Load(myReader);
+                
             }
             catch (Exception ex)
             {
@@ -56,7 +57,9 @@ namespace CursoWindowsFormsBiblioteca.DataBases
                 {
                     CommandTimeout = 0
                 };
+                myCommand.Connection = connDB;
                 var myReader = myCommand.ExecuteReader();
+                myReader.Close();
                 return string.Empty;
 
             }

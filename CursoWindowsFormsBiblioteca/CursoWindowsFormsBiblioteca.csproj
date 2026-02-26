@@ -98,11 +98,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DataBases\Fichario.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="DataBases\Fichario.mdf" />
     <Content Include="DataBases\Fichario_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Fichario.mdf</DependentUpon>
     </Content>
   </ItemGroup>
