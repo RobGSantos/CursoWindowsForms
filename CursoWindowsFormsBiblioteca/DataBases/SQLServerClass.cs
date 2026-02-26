@@ -2,6 +2,7 @@
 using System;
 using System.Data.SqlClient;
 using System.Data;
+using System.Configuration;
 
 namespace CursoWindowsFormsBiblioteca.DataBases
 {
@@ -14,8 +15,9 @@ namespace CursoWindowsFormsBiblioteca.DataBases
         {
             try
             {
-                stringConn = "Data Source = sgmgabc10837; Initial Catalog = ByteBank; User ID = sa; Password = Banco#2025#cgp;TrustServerCertificate=True";
-
+                //stringConn = "Data Source = sgmgabc10837; Initial Catalog = ByteBank; User ID = sa; Password = Banco#2025#cgp;TrustServerCertificate=True";
+                
+                stringConn = ConfigurationManager.ConnectionStrings["ConexaoSQLServer"].ConnectionString;
                 connDB = new SqlConnection(stringConn);
                 connDB.Open();
             }
