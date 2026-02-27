@@ -51,6 +51,7 @@
             this.windowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Tbc_Aplicacoes = new System.Windows.Forms.TabControl();
             this.Iml_Imagens = new System.Windows.Forms.ImageList(this.components);
+            this.agênciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Mnu_Principal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,7 +66,7 @@
             this.Mnu_Principal.Location = new System.Drawing.Point(0, 0);
             this.Mnu_Principal.Name = "Mnu_Principal";
             this.Mnu_Principal.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.Mnu_Principal.Size = new System.Drawing.Size(800, 30);
+            this.Mnu_Principal.Size = new System.Drawing.Size(800, 28);
             this.Mnu_Principal.TabIndex = 0;
             this.Mnu_Principal.Text = "menuStrip1";
             // 
@@ -78,20 +79,20 @@
             this.apagarAbaToolStripMenuItem,
             this.sairToolStripMenuItem});
             this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
-            this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(75, 26);
+            this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
             this.arquivoToolStripMenuItem.Text = "Arquivo";
             // 
             // conectarToolStripMenuItem
             // 
             this.conectarToolStripMenuItem.Name = "conectarToolStripMenuItem";
-            this.conectarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.conectarToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.conectarToolStripMenuItem.Text = "Conectar";
             this.conectarToolStripMenuItem.Click += new System.EventHandler(this.conectarToolStripMenuItem_Click);
             // 
             // desconectarToolStripMenuItem
             // 
             this.desconectarToolStripMenuItem.Name = "desconectarToolStripMenuItem";
-            this.desconectarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.desconectarToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.desconectarToolStripMenuItem.Text = "Desconectar";
             this.desconectarToolStripMenuItem.Click += new System.EventHandler(this.desconectarToolStripMenuItem_Click);
             // 
@@ -105,7 +106,7 @@
             this.validaCPF2ToolStripMenuItem,
             this.valídaSenhaToolStripMenuItem});
             this.novoToolStripMenuItem.Name = "novoToolStripMenuItem";
-            this.novoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.novoToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.novoToolStripMenuItem.Text = "Novo";
             // 
             // demonstraçãoKeyToolStripMenuItem
@@ -165,14 +166,14 @@
             // apagarAbaToolStripMenuItem
             // 
             this.apagarAbaToolStripMenuItem.Name = "apagarAbaToolStripMenuItem";
-            this.apagarAbaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.apagarAbaToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.apagarAbaToolStripMenuItem.Text = "Apagar Aba";
             this.apagarAbaToolStripMenuItem.Click += new System.EventHandler(this.apagarAbaToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(174, 26);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -183,13 +184,14 @@
             this.byteBankToolStripMenuItem.Image = global::CursoWindowsForms.Properties.Resources.money;
             this.byteBankToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.byteBankToolStripMenuItem.Name = "byteBankToolStripMenuItem";
-            this.byteBankToolStripMenuItem.Size = new System.Drawing.Size(104, 26);
+            this.byteBankToolStripMenuItem.Size = new System.Drawing.Size(104, 24);
             this.byteBankToolStripMenuItem.Text = "ByteBank";
             // 
             // cadasToolStripMenuItem
             // 
             this.cadasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.clienteToolStripMenuItem});
+            this.clienteToolStripMenuItem,
+            this.agênciaToolStripMenuItem});
             this.cadasToolStripMenuItem.Image = global::CursoWindowsForms.Properties.Resources.Cadastros;
             this.cadasToolStripMenuItem.Name = "cadasToolStripMenuItem";
             this.cadasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
@@ -199,7 +201,7 @@
             // 
             this.clienteToolStripMenuItem.Image = global::CursoWindowsForms.Properties.Resources.user;
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(138, 26);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.clienteToolStripMenuItem.Text = "Cliente";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
@@ -208,7 +210,7 @@
             this.açõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.abirImagemToolStripMenuItem});
             this.açõesToolStripMenuItem.Name = "açõesToolStripMenuItem";
-            this.açõesToolStripMenuItem.Size = new System.Drawing.Size(63, 26);
+            this.açõesToolStripMenuItem.Size = new System.Drawing.Size(63, 24);
             this.açõesToolStripMenuItem.Text = "Ações";
             // 
             // abirImagemToolStripMenuItem
@@ -221,19 +223,20 @@
             // windowsToolStripMenuItem
             // 
             this.windowsToolStripMenuItem.Name = "windowsToolStripMenuItem";
-            this.windowsToolStripMenuItem.Size = new System.Drawing.Size(84, 26);
+            this.windowsToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
             this.windowsToolStripMenuItem.Text = "Windows";
             // 
             // Tbc_Aplicacoes
             // 
             this.Tbc_Aplicacoes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Tbc_Aplicacoes.ImageList = this.Iml_Imagens;
-            this.Tbc_Aplicacoes.Location = new System.Drawing.Point(0, 30);
+            this.Tbc_Aplicacoes.Location = new System.Drawing.Point(0, 28);
             this.Tbc_Aplicacoes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Tbc_Aplicacoes.Name = "Tbc_Aplicacoes";
             this.Tbc_Aplicacoes.SelectedIndex = 0;
-            this.Tbc_Aplicacoes.Size = new System.Drawing.Size(800, 420);
+            this.Tbc_Aplicacoes.Size = new System.Drawing.Size(800, 422);
             this.Tbc_Aplicacoes.TabIndex = 1;
+            this.Tbc_Aplicacoes.SelectedIndexChanged += new System.EventHandler(this.Tbc_Aplicacoes_SelectedIndexChanged);
             this.Tbc_Aplicacoes.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Tbc_Aplicacoes_MouseClick);
             this.Tbc_Aplicacoes.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Tbc_Aplicacoes_MouseDown);
             // 
@@ -249,6 +252,14 @@
             this.Iml_Imagens.Images.SetKeyName(5, "Frm_ValidaSenha.png");
             this.Iml_Imagens.Images.SetKeyName(6, "Pasta.png");
             this.Iml_Imagens.Images.SetKeyName(7, "user.png");
+            // 
+            // agênciaToolStripMenuItem
+            // 
+            this.agênciaToolStripMenuItem.Image = global::CursoWindowsForms.Properties.Resources.bank;
+            this.agênciaToolStripMenuItem.Name = "agênciaToolStripMenuItem";
+            this.agênciaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.agênciaToolStripMenuItem.Text = "Agência";
+            this.agênciaToolStripMenuItem.Click += new System.EventHandler(this.agênciaToolStripMenuItem_Click);
             // 
             // Frm_Principal_Menu_UC
             // 
@@ -293,5 +304,6 @@
         private System.Windows.Forms.ToolStripMenuItem byteBankToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem agênciaToolStripMenuItem;
     }
 }

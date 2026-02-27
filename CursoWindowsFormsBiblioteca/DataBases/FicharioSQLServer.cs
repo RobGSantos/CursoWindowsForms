@@ -120,7 +120,8 @@ namespace CursoWindowsFormsBiblioteca.DataBases
                 var sql = $@"SELECT COUNT(*) AS [CONTAGEM] FROM [{tabela}] WHERE ID = '{Id}'";
                 var dt = db.SQLQuery(sql);
 
-                if (dt.Rows[0]["CONTAGEM"].Equals("0"))
+                bool v = dt.Rows[0]["CONTAGEM"].Equals("0");
+                if (v)
                     throw new Exception($"Nenhum registro com o identificador {Id} foi localizado!");
 
                 sql = $@"DELETE FROM [{tabela}] WHERE ID = '{Id}'";

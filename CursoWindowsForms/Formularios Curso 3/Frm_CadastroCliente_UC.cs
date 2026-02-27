@@ -1,16 +1,11 @@
 ﻿
 using CursoWindowsFormsBiblioteca.Classes;
-using CursoWindowsFormsBiblioteca.DataBases;
 using CursoWindowsFormsBiblioteca;
 
 using Microsoft.VisualBasic;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Runtime.ConstrainedExecution;
-using System.Security;
 using System.Windows.Forms;
-using System.Runtime.Remoting.Messaging;
 using System.Linq;
 namespace CursoWindowsForms
 {
@@ -42,6 +37,8 @@ namespace CursoWindowsForms
             Lbl_Cidade.Text = "Cidade";
             Chk_NaoTemPai.Text = "Pai Desconhecido";
             Btn_Busca.Text = "Buscar";
+            Grb_DataGrid.Text = "Clientes";
+
 
             Cmb_Estados.Items.Clear();
             Cmb_Estados.Items.Add("Acre (AC)");
@@ -79,7 +76,9 @@ namespace CursoWindowsForms
             Tls_Principal.Items[4].ToolTipText = "Limpa dados da tela de entrada de dados";
 
             LimparDadosFormulario();
-            
+            AtualizarGrid();
+
+
         }
 
         private void Chk_NaoTemPai_CheckedChanged(object sender, EventArgs e)
@@ -835,6 +834,8 @@ namespace CursoWindowsForms
                 MessageBox.Show($"OK. Identificador incluído com sucesso {C.Id}",
                     "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                AtualizarGrid();
+
             }
             catch (ValidationException Ex)
             {
@@ -892,6 +893,7 @@ namespace CursoWindowsForms
 
                 MessageBox.Show($"Formulário alterado com sucesso. Identificador: {C.Id}",
                     "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                AtualizarGrid();
             }
             catch (ValidationException Ex)
             {
@@ -931,6 +933,8 @@ namespace CursoWindowsForms
 
                 LimparDadosFormulario();
                 MessageBox.Show($"Formulário com identificador {C.Id} excluído com sucesso!", "Byte Bank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                AtualizarGrid();
             }
             catch (Exception Ex)
             {
@@ -971,5 +975,36 @@ namespace CursoWindowsForms
 
         }
         #endregion
+
+        private void AtualizarGrid()
+        {
+            try
+            {
+                Cliente.Unit C = new Cliente.Unit();
+                var listaBusca = C.ListaFicharioSQLRel();
+
+                if (!listaBusca.Any())
+                {
+                    MessageBox.Show("Base de dados está vazia. Nenhum formulário foi encontrado!", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                Dg_Clientes.Rows.Clear();
+                for (int i = 0; i < listaBusca.Count; i++)
+                {
+                    DataGridViewRow row = new DataGridViewRow();
+                    row.CreateCells(Dg_Clientes);
+                    row.Cells[0].Value = listaBusca[i][0].ToString();
+                    row.Cells[1].Value = listaBusca[i][1].ToString();
+                    Dg_Clientes.Rows.Add(row);
+                }
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
     }
+
+
 }

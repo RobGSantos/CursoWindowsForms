@@ -750,18 +750,6 @@
   <data name="&gt;&gt;Txt_CPF.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="Btn_Busca.Location" type="System.Drawing.Point, System.Drawing">
-    <value>297, 20</value>
-  </data>
-  <data name="Btn_Busca.Size" type="System.Drawing.Size, System.Drawing">
-    <value>136, 32</value>
-  </data>
-  <data name="Btn_Busca.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="Btn_Busca.Text" xml:space="preserve">
-    <value>button1</value>
-  </data>
   <data name="&gt;&gt;Btn_Busca.Name" xml:space="preserve">
     <value>Btn_Busca</value>
   </data>
@@ -802,11 +790,155 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Grp_Codigo.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
+  </data>
+  <data name="Btn_Busca.Location" type="System.Drawing.Point, System.Drawing">
+    <value>297, 20</value>
+  </data>
+  <data name="Btn_Busca.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 32</value>
+  </data>
+  <data name="Btn_Busca.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="Btn_Busca.Text" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;Btn_Busca.Name" xml:space="preserve">
+    <value>Btn_Busca</value>
+  </data>
+  <data name="&gt;&gt;Btn_Busca.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Btn_Busca.Parent" xml:space="preserve">
+    <value>Grp_Codigo</value>
+  </data>
+  <data name="&gt;&gt;Btn_Busca.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="&gt;&gt;Grp_Genero.Name" xml:space="preserve">
+    <value>Grp_Genero</value>
+  </data>
+  <data name="&gt;&gt;Grp_Genero.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Grp_Genero.Parent" xml:space="preserve">
+    <value>Grp_DadosPessoais</value>
+  </data>
+  <data name="&gt;&gt;Grp_Genero.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Grp_TemPai.Name" xml:space="preserve">
+    <value>Grp_TemPai</value>
+  </data>
+  <data name="&gt;&gt;Grp_TemPai.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Grp_TemPai.Parent" xml:space="preserve">
+    <value>Grp_DadosPessoais</value>
+  </data>
+  <data name="&gt;&gt;Grp_TemPai.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Grp_DadosPessoais.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 119</value>
+  </data>
+  <data name="Grp_DadosPessoais.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="Grp_DadosPessoais.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="Grp_DadosPessoais.Size" type="System.Drawing.Size, System.Drawing">
+    <value>787, 210</value>
+  </data>
+  <data name="Grp_DadosPessoais.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="Grp_DadosPessoais.Text" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;Grp_DadosPessoais.Name" xml:space="preserve">
+    <value>Grp_DadosPessoais</value>
+  </data>
+  <data name="&gt;&gt;Grp_DadosPessoais.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Grp_DadosPessoais.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Grp_DadosPessoais.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;Rbt_Outros.Name" xml:space="preserve">
+    <value>Rbt_Outros</value>
+  </data>
+  <data name="&gt;&gt;Rbt_Outros.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Rbt_Outros.Parent" xml:space="preserve">
+    <value>Grp_Genero</value>
+  </data>
+  <data name="&gt;&gt;Rbt_Outros.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Rbt_Feminino.Name" xml:space="preserve">
+    <value>Rbt_Feminino</value>
+  </data>
+  <data name="&gt;&gt;Rbt_Feminino.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Rbt_Feminino.Parent" xml:space="preserve">
+    <value>Grp_Genero</value>
+  </data>
+  <data name="&gt;&gt;Rbt_Feminino.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Rbt_Masculino.Name" xml:space="preserve">
+    <value>Rbt_Masculino</value>
+  </data>
+  <data name="&gt;&gt;Rbt_Masculino.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Rbt_Masculino.Parent" xml:space="preserve">
+    <value>Grp_Genero</value>
+  </data>
+  <data name="&gt;&gt;Rbt_Masculino.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Grp_Genero.Location" type="System.Drawing.Point, System.Drawing">
+    <value>292, 153</value>
+  </data>
+  <data name="Grp_Genero.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="Grp_Genero.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="Grp_Genero.Size" type="System.Drawing.Size, System.Drawing">
+    <value>409, 49</value>
+  </data>
+  <data name="Grp_Genero.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="Grp_Genero.Text" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;Grp_Genero.Name" xml:space="preserve">
+    <value>Grp_Genero</value>
+  </data>
+  <data name="&gt;&gt;Grp_Genero.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Grp_Genero.Parent" xml:space="preserve">
+    <value>Grp_DadosPessoais</value>
+  </data>
+  <data name="&gt;&gt;Grp_Genero.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="Rbt_Outros.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -897,56 +1029,8 @@
   <data name="&gt;&gt;Rbt_Masculino.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="Grp_Genero.Location" type="System.Drawing.Point, System.Drawing">
-    <value>292, 153</value>
-  </data>
-  <data name="Grp_Genero.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="Grp_Genero.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="Grp_Genero.Size" type="System.Drawing.Size, System.Drawing">
-    <value>409, 49</value>
-  </data>
-  <data name="Grp_Genero.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="Grp_Genero.Text" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;Grp_Genero.Name" xml:space="preserve">
-    <value>Grp_Genero</value>
-  </data>
-  <data name="&gt;&gt;Grp_Genero.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Grp_Genero.Parent" xml:space="preserve">
-    <value>Grp_DadosPessoais</value>
-  </data>
-  <data name="&gt;&gt;Grp_Genero.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="Grp_TemPai.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
-  </data>
-  <data name="Chk_NaoTemPai.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Chk_NaoTemPai.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 36</value>
-  </data>
-  <data name="Chk_NaoTemPai.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="Chk_NaoTemPai.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 20</value>
-  </data>
-  <data name="Chk_NaoTemPai.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="Chk_NaoTemPai.Text" xml:space="preserve">
-    <value>checkBox1</value>
   </data>
   <data name="&gt;&gt;Chk_NaoTemPai.Name" xml:space="preserve">
     <value>Chk_NaoTemPai</value>
@@ -987,34 +1071,100 @@
   <data name="&gt;&gt;Grp_TemPai.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="Grp_DadosPessoais.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 119</value>
+  <data name="Chk_NaoTemPai.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="Grp_DadosPessoais.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="Chk_NaoTemPai.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 36</value>
+  </data>
+  <data name="Chk_NaoTemPai.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
-  <data name="Grp_DadosPessoais.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="Chk_NaoTemPai.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 20</value>
+  </data>
+  <data name="Chk_NaoTemPai.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Chk_NaoTemPai.Text" xml:space="preserve">
+    <value>checkBox1</value>
+  </data>
+  <data name="&gt;&gt;Chk_NaoTemPai.Name" xml:space="preserve">
+    <value>Chk_NaoTemPai</value>
+  </data>
+  <data name="&gt;&gt;Chk_NaoTemPai.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Chk_NaoTemPai.Parent" xml:space="preserve">
+    <value>Grp_TemPai</value>
+  </data>
+  <data name="&gt;&gt;Chk_NaoTemPai.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Cmb_Estados.Name" xml:space="preserve">
+    <value>Cmb_Estados</value>
+  </data>
+  <data name="&gt;&gt;Cmb_Estados.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Cmb_Estados.Parent" xml:space="preserve">
+    <value>Grp_Endereco</value>
+  </data>
+  <data name="&gt;&gt;Cmb_Estados.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Txt_Cidade.Name" xml:space="preserve">
+    <value>Txt_Cidade</value>
+  </data>
+  <data name="&gt;&gt;Txt_Cidade.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Txt_Cidade.Parent" xml:space="preserve">
+    <value>Grp_Endereco</value>
+  </data>
+  <data name="&gt;&gt;Txt_Cidade.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;Lbl_Cidade.Name" xml:space="preserve">
+    <value>Lbl_Cidade</value>
+  </data>
+  <data name="&gt;&gt;Lbl_Cidade.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Lbl_Cidade.Parent" xml:space="preserve">
+    <value>Grp_Endereco</value>
+  </data>
+  <data name="&gt;&gt;Lbl_Cidade.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="Grp_Endereco.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 332</value>
+  </data>
+  <data name="Grp_Endereco.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
-  <data name="Grp_DadosPessoais.Size" type="System.Drawing.Size, System.Drawing">
-    <value>787, 210</value>
+  <data name="Grp_Endereco.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
   </data>
-  <data name="Grp_DadosPessoais.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="Grp_Endereco.Size" type="System.Drawing.Size, System.Drawing">
+    <value>787, 171</value>
   </data>
-  <data name="Grp_DadosPessoais.Text" xml:space="preserve">
+  <data name="Grp_Endereco.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="Grp_Endereco.Text" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;Grp_DadosPessoais.Name" xml:space="preserve">
-    <value>Grp_DadosPessoais</value>
+  <data name="&gt;&gt;Grp_Endereco.Name" xml:space="preserve">
+    <value>Grp_Endereco</value>
   </data>
-  <data name="&gt;&gt;Grp_DadosPessoais.Type" xml:space="preserve">
+  <data name="&gt;&gt;Grp_Endereco.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Grp_DadosPessoais.Parent" xml:space="preserve">
+  <data name="&gt;&gt;Grp_Endereco.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;Grp_DadosPessoais.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;Grp_Endereco.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="Cmb_Estados.Location" type="System.Drawing.Point, System.Drawing">
@@ -1092,36 +1242,6 @@
   <data name="&gt;&gt;Lbl_Cidade.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="Grp_Endereco.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 332</value>
-  </data>
-  <data name="Grp_Endereco.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="Grp_Endereco.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="Grp_Endereco.Size" type="System.Drawing.Size, System.Drawing">
-    <value>787, 171</value>
-  </data>
-  <data name="Grp_Endereco.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="Grp_Endereco.Text" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;Grp_Endereco.Name" xml:space="preserve">
-    <value>Grp_Endereco</value>
-  </data>
-  <data name="&gt;&gt;Grp_Endereco.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Grp_Endereco.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Grp_Endereco.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="Grp_Outros.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 505</value>
   </data>
@@ -1150,11 +1270,35 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Grp_Outros.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <metadata name="Tls_Principal.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>211, 17</value>
   </metadata>
+  <data name="Tls_Principal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="Tls_Principal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1660, 27</value>
+  </data>
+  <data name="Tls_Principal.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="Tls_Principal.Text" xml:space="preserve">
+    <value>toolStrip1</value>
+  </data>
+  <data name="&gt;&gt;Tls_Principal.Name" xml:space="preserve">
+    <value>Tls_Principal</value>
+  </data>
+  <data name="&gt;&gt;Tls_Principal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Tls_Principal.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Tls_Principal.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="novoToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -1242,30 +1386,90 @@
   <data name="LimpaStripButton.Text" xml:space="preserve">
     <value>toolTipStrip1</value>
   </data>
-  <data name="Tls_Principal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <metadata name="Id.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Id.HeaderText" xml:space="preserve">
+    <value>Código Cliente</value>
   </data>
-  <data name="Tls_Principal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>811, 27</value>
+  <data name="Id.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="Tls_Principal.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="Id.Width" type="System.Int32, mscorlib">
+    <value>150</value>
   </data>
-  <data name="Tls_Principal.Text" xml:space="preserve">
-    <value>toolStrip1</value>
+  <metadata name="Nome.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Nome.HeaderText" xml:space="preserve">
+    <value>Nome do Cliente</value>
   </data>
-  <data name="&gt;&gt;Tls_Principal.Name" xml:space="preserve">
-    <value>Tls_Principal</value>
+  <data name="Nome.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="&gt;&gt;Tls_Principal.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Nome.Width" type="System.Int32, mscorlib">
+    <value>250</value>
   </data>
-  <data name="&gt;&gt;Tls_Principal.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="Dg_Clientes.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
-  <data name="&gt;&gt;Tls_Principal.ZOrder" xml:space="preserve">
+  <data name="Dg_Clientes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 18</value>
+  </data>
+  <data name="Dg_Clientes.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="Dg_Clientes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>531, 440</value>
+  </data>
+  <data name="Dg_Clientes.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
+  <data name="&gt;&gt;Dg_Clientes.Name" xml:space="preserve">
+    <value>Dg_Clientes</value>
+  </data>
+  <data name="&gt;&gt;Dg_Clientes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Dg_Clientes.Parent" xml:space="preserve">
+    <value>Grb_DataGrid</value>
+  </data>
+  <data name="&gt;&gt;Dg_Clientes.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Grb_DataGrid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>801, 104</value>
+  </data>
+  <data name="Grb_DataGrid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>537, 461</value>
+  </data>
+  <data name="Grb_DataGrid.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="Grb_DataGrid.Text" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;Grb_DataGrid.Name" xml:space="preserve">
+    <value>Grb_DataGrid</value>
+  </data>
+  <data name="&gt;&gt;Grb_DataGrid.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Grb_DataGrid.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Grb_DataGrid.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="byteBankDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>352, 17</value>
+  </metadata>
+  <metadata name="tBClienteBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>526, 17</value>
+  </metadata>
+  <metadata name="tB_ClienteTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>742, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1279,7 +1483,7 @@
     <value>3, 2, 3, 2</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>811, 626</value>
+    <value>1660, 632</value>
   </data>
   <data name="&gt;&gt;backgroundWorker1.Name" xml:space="preserve">
     <value>backgroundWorker1</value>
@@ -1316,6 +1520,36 @@
   </data>
   <data name="&gt;&gt;LimpaStripButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;byteBankDataSet.Name" xml:space="preserve">
+    <value>byteBankDataSet</value>
+  </data>
+  <data name="&gt;&gt;byteBankDataSet.Type" xml:space="preserve">
+    <value>CursoWindowsForms.ByteBankDataSet, ByteBankDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;tBClienteBindingSource.Name" xml:space="preserve">
+    <value>tBClienteBindingSource</value>
+  </data>
+  <data name="&gt;&gt;tBClienteBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tB_ClienteTableAdapter.Name" xml:space="preserve">
+    <value>tB_ClienteTableAdapter</value>
+  </data>
+  <data name="&gt;&gt;tB_ClienteTableAdapter.Type" xml:space="preserve">
+    <value>CursoWindowsForms.ByteBankDataSetTableAdapters.TB_ClienteTableAdapter, ByteBankDataSet.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Id.Name" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="&gt;&gt;Id.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Nome.Name" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="&gt;&gt;Nome.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Frm_CadastroCliente_UC</value>

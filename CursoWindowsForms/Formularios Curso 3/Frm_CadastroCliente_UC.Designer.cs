@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_CadastroCliente_UC));
             this.Txt_Codigo = new System.Windows.Forms.TextBox();
             this.Lbl_NomeCliente = new System.Windows.Forms.Label();
@@ -74,6 +75,13 @@
             this.salvarToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.ApagaStripButton = new System.Windows.Forms.ToolStripButton();
             this.LimpaStripButton = new System.Windows.Forms.ToolStripButton();
+            this.Grb_DataGrid = new System.Windows.Forms.GroupBox();
+            this.Dg_Clientes = new System.Windows.Forms.DataGridView();
+            this.byteBankDataSet = new CursoWindowsForms.ByteBankDataSet();
+            this.tBClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tB_ClienteTableAdapter = new CursoWindowsForms.ByteBankDataSetTableAdapters.TB_ClienteTableAdapter();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Grp_Codigo.SuspendLayout();
             this.Grp_DadosPessoais.SuspendLayout();
             this.Grp_Genero.SuspendLayout();
@@ -81,6 +89,10 @@
             this.Grp_Endereco.SuspendLayout();
             this.Grp_Outros.SuspendLayout();
             this.Tls_Principal.SuspendLayout();
+            this.Grb_DataGrid.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dg_Clientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.byteBankDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBClienteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Txt_Codigo
@@ -375,10 +387,58 @@
             this.LimpaStripButton.Name = "LimpaStripButton";
             this.LimpaStripButton.Click += new System.EventHandler(this.LimpaStripButton_Click);
             // 
+            // Grb_DataGrid
+            // 
+            this.Grb_DataGrid.Controls.Add(this.Dg_Clientes);
+            resources.ApplyResources(this.Grb_DataGrid, "Grb_DataGrid");
+            this.Grb_DataGrid.Name = "Grb_DataGrid";
+            this.Grb_DataGrid.TabStop = false;
+            // 
+            // Dg_Clientes
+            // 
+            this.Dg_Clientes.AllowUserToAddRows = false;
+            this.Dg_Clientes.AllowUserToDeleteRows = false;
+            this.Dg_Clientes.AllowUserToOrderColumns = true;
+            this.Dg_Clientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dg_Clientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.Nome});
+            resources.ApplyResources(this.Dg_Clientes, "Dg_Clientes");
+            this.Dg_Clientes.Name = "Dg_Clientes";
+            this.Dg_Clientes.ReadOnly = true;
+            this.Dg_Clientes.RowTemplate.Height = 24;
+            // 
+            // byteBankDataSet
+            // 
+            this.byteBankDataSet.DataSetName = "ByteBankDataSet";
+            this.byteBankDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tBClienteBindingSource
+            // 
+            this.tBClienteBindingSource.DataMember = "TB_Cliente";
+            this.tBClienteBindingSource.DataSource = this.byteBankDataSet;
+            // 
+            // tB_ClienteTableAdapter
+            // 
+            this.tB_ClienteTableAdapter.ClearBeforeFill = true;
+            // 
+            // Id
+            // 
+            resources.ApplyResources(this.Id, "Id");
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // Nome
+            // 
+            resources.ApplyResources(this.Nome, "Nome");
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            // 
             // Frm_CadastroCliente_UC
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.Grb_DataGrid);
             this.Controls.Add(this.Tls_Principal);
             this.Controls.Add(this.Grp_Outros);
             this.Controls.Add(this.Grp_Endereco);
@@ -399,6 +459,10 @@
             this.Grp_Outros.PerformLayout();
             this.Tls_Principal.ResumeLayout(false);
             this.Tls_Principal.PerformLayout();
+            this.Grb_DataGrid.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Dg_Clientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.byteBankDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBClienteBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -450,5 +514,12 @@
         private System.Windows.Forms.ToolStripButton ApagaStripButton;
         private System.Windows.Forms.ToolStripButton LimpaStripButton;
         private System.Windows.Forms.Button Btn_Busca;
+        private System.Windows.Forms.GroupBox Grb_DataGrid;
+        private System.Windows.Forms.DataGridView Dg_Clientes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private ByteBankDataSet byteBankDataSet;
+        private System.Windows.Forms.BindingSource tBClienteBindingSource;
+        private ByteBankDataSetTableAdapters.TB_ClienteTableAdapter tB_ClienteTableAdapter;
     }
 }

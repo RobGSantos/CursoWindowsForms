@@ -376,5 +376,16 @@ namespace CursoWindowsForms
                 ControleCadastroCliente = 0;
             Tbc_Aplicacoes.TabPages.Remove(Tb);
         }
+
+        private void agênciaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Agencia FFrom = new Frm_Agencia();
+            FFrom.ShowDialog();
+        }
+
+        private void Tbc_Aplicacoes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
