@@ -306,69 +306,48 @@ namespace CursoWindowsFormsBiblioteca.Classes
             #region "Funções Auxíliares"
             public string ToInsert()
             {
-                string sql = $@"INSERT INTO TB_Cliente
-                                (Id, 
-                                Nome, 
-                                NomePai, 
-                                NomeMae,
-                                NaoTemPai, 
-                                CPF, 
-                                Genero, 
-                                CEP, 
-                                Logradouro, 
-                                Complemento, 
-                                Bairro, 
-                                Cidade, 
-                                Estado, 
-                                Telefone, 
-                                Profissao, 
-                                RendaFamiliar) 
-                                VALUES ";
-                sql += $@"( '{Id}', 
-                            '{Nome}', 
-                            '{NomePai}', 
-                            '{NomeMae}',
-                            {NaoTemPai}, 
-                            '{CPF}', 
-                            {Genero}, 
-                            '{CEP}', 
-                            '{Logradouro}', 
-                            '{Complemento}', 
-                            '{Bairro}', 
-                            '{Cidade}', 
-                            '{Estado}', 
-                            '{Telefone}', 
-                            '{Profissao}', 
-                            {RendaFamiliar})";
+                var sql = "INSERT INTO [dbo].[TB_Cliente]"
+                        + " ([Id], [Nome], [NomePai]"
+                        + " ,[NomeMae], [NaoTemPai], [CPF], [Genero]"
+                        + " ,[CEP], [Logradouro], [Complemento] "
+                        + " ,[Bairro], [Cidade], [Estado], [Telefone]"
+                        + " , [Profissao], [RendaFamiliar])"
+                        + " VALUES"
+                        + $" ('{Id}', '{Nome}', '{NomePai}', '{NomeMae}'"
+                        + $", {(NaoTemPai ? 1 : 0)}, '{CPF}', {Genero}, '{CEP}'"
+                        + $", '{Logradouro}', '{Complemento}', '{Bairro}'"
+                        + $", '{Cidade}', '{Estado}', '{Telefone}'"
+                        + $", '{Profissao}', {RendaFamiliar})";
                 return sql;
             }
 
             public string ToUpdate(string pId)
             {
-                string sql = $@"UPDATE TB_Cliente 
-                                SET 
-                                Nome = '{Nome}',
-                                NomePai = '{NomePai}',
-                                NomeMae = '{NomeMae}',
-                                NaoTemPai = {NaoTemPai},
-                                CPF = '{CPF}',
-                                Genero = {Genero},
-                                CEP = '{CEP}',
-                                Logradouro = '{Logradouro}',
-                                Complemento = '{Complemento}',
-                                Bairro = '{Bairro}',
-                                Cidade = '{Cidade}',
-                                Estado = '{Estado}',
-                                Telefone = {Telefone},
-                                Profissao = '{Profissao}',
-                                RendaFamiliar = {RendaFamiliar} 
-                                WHERE Id= '{pId}'";
+                string sql = "UPDATE TB_Cliente" 
+                           + " SET"
+                           + $" Nome = '{Nome}'"
+                           + $", NomePai = '{NomePai}'"
+                           + $", NomeMae = '{NomeMae}'"
+                           + $", NaoTemPai = {(NaoTemPai == true ? 1 : 0)}"
+                           + $", CPF = '{CPF}'"
+                           + $", Genero = {Genero}"
+                           + $", CEP = '{CEP}'"
+                           + $", Logradouro = '{Logradouro}'"
+                           + $", Complemento = '{Complemento}'"
+                           + $", Bairro = '{Bairro}'"
+                           + $", Cidade = '{Cidade}'"
+                           + $", Estado = '{Estado}'"
+                           + $", Telefone = {Telefone}"
+                           + $", Profissao = '{Profissao}'"
+                           + $", RendaFamiliar = {RendaFamiliar}"
+                           + $" WHERE Id= '{pId}'";
                 return sql;
             }
 
             public Unit DataRowToUnit(DataRow dr)
             {
                 Unit u = new Unit();
+                u.Id = dr["Id"].ToString();
                 u.Nome = dr["Nome"].ToString();
                 u.NomePai = dr["NomePai"].ToString();
                 u.NomeMae = dr["NomeMae"].ToString();
@@ -408,24 +387,13 @@ namespace CursoWindowsFormsBiblioteca.Classes
             {
                 try
                 {
-                    var sql = $@"SELECT (Id, 
-                                Nome, 
-                                NomePai, 
-                                NomeMae,
-                                NaoTemPai, 
-                                CPF, 
-                                Genero, 
-                                CEP, 
-                                Logradouro, 
-                                Complemento, 
-                                Bairro, 
-                                Cidade, 
-                                Estado, 
-                                Telefone, 
-                                Profissao, 
-                                RendaFamiliar)
-                                FROM TB_CLIENTE 
-                                WHERE ID = {pId}";
+                    var sql = "SELECT [Id], [Nome], [NomePai]"
+                        + " , [NomeMae], [NaoTemPai], [CPF], [Genero]"
+                        + " , [CEP], [Logradouro], [Complemento] "
+                        + " , [Bairro], [Cidade], [Estado], [Telefone]" 
+                        + " , [Profissao], [RendaFamiliar]"
+                        + " FROM [TB_CLIENTE] "
+                        + $" WHERE ID = '{pId}'";
 
                     var db = new SQLServerClass();
                     var dt = db.SQLQuery(sql);
@@ -449,24 +417,13 @@ namespace CursoWindowsFormsBiblioteca.Classes
             {
                 try
                 {
-                    var sql = $@"SELECT (Id, 
-                                Nome, 
-                                NomePai, 
-                                NomeMae,
-                                NaoTemPai, 
-                                CPF, 
-                                Genero, 
-                                CEP, 
-                                Logradouro, 
-                                Complemento, 
-                                Bairro, 
-                                Cidade, 
-                                Estado, 
-                                Telefone, 
-                                Profissao, 
-                                RendaFamiliar)
-                                FROM TB_CLIENTE 
-                                WHERE ID = {pId}";
+                    var sql = "SELECT [Id], [Nome], [NomePai]"
+                        + " ,[NomeMae], [NaoTemPai], [CPF], [Genero]"
+                        + " ,[CEP], [Logradouro], [Complemento] "
+                        + " ,[Bairro], [Cidade], [Estado], [Telefone]"
+                        + " , [Profissao], [RendaFamiliar]"
+                        + " FROM [TB_CLIENTE] "
+                        + $" WHERE ID = '{pId}'";
 
                     var db = new SQLServerClass();
                     var dt = db.SQLQuery(sql);
@@ -490,29 +447,12 @@ namespace CursoWindowsFormsBiblioteca.Classes
             {
                 try
                 {
-                    var sql = $@"SELECT (Id, 
-                                    Nome, 
-                                    NomePai, 
-                                    NomeMae,
-                                    NaoTemPai, 
-                                    CPF, 
-                                    Genero, 
-                                    CEP, 
-                                    Logradouro, 
-                                    Complemento, 
-                                    Bairro, 
-                                    Cidade, 
-                                    Estado, 
-                                    Telefone, 
-                                    Profissao, 
-                                    RendaFamiliar)
-                                    FROM TB_CLIENTE 
-                                    WHERE ID = {Id}";
+                    var sql = "SELECT COUNT(*) AS [CONTAGEM] FROM [TB_CLIENTE] WHERE ID = '{Id}'";
 
                     var db = new SQLServerClass();
                     var dt = db.SQLQuery(sql);
 
-                    if (dt.Rows.Count.Equals(0))
+                    if (dt.Rows[0]["CONTAGEM"].Equals("0"))
                     {
                         db.Close();
                         throw new Exception($"Nenhum registro encontrado para o identificador {Id}");
@@ -529,7 +469,7 @@ namespace CursoWindowsFormsBiblioteca.Classes
                 
             }
 
-            public List<List<string>> ListaFicharioSQLServer()
+            public List<List<string>> ListaFicharioSQLRel()
             {
                 try
                 {

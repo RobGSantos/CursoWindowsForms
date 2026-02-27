@@ -33,11 +33,11 @@ namespace CursoWindowsFormsBiblioteca.DataBases
             var dt = new DataTable();
             try
             {
-                var myCommand = new SqlCommand(sql)
+                SqlCommand myCommand = new SqlCommand(sql)
                 {
-                    CommandTimeout = 0
+                    CommandTimeout = 0,
+                    Connection = connDB
                 };
-                myCommand.Connection = connDB;
                 SqlDataReader myReader = myCommand.ExecuteReader();
                 dt.Load(myReader);
 

@@ -11,6 +11,7 @@ using System.Runtime.ConstrainedExecution;
 using System.Security;
 using System.Windows.Forms;
 using System.Runtime.Remoting.Messaging;
+using System.Linq;
 namespace CursoWindowsForms
 {
     public partial class Frm_CadastroCliente_UC : UserControl
@@ -234,7 +235,7 @@ namespace CursoWindowsForms
         //    try
         //    {
         //        Cliente.Unit C = new Cliente.Unit();
-                
+
         //        C = LeituraFormulario();
         //        C.ValidaClasse();
         //        C.ValidaComplemento();
@@ -473,13 +474,13 @@ namespace CursoWindowsForms
         //            listaBusca.Add(new List<string> { C.Id, C.Nome });
         //        }
 
-                
+
         //        if (listaBusca.Count <= 0)
         //        {
         //            MessageBox.Show("Base de dados está vazia. Nenhum formulário foi encontrado!", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         //            return;
         //        }
-                
+
         //        Frm_Busca FFrom = new Frm_Busca(listaBusca);
         //        FFrom.ShowDialog();
 
@@ -549,7 +550,7 @@ namespace CursoWindowsForms
         //        MessageBox.Show(Ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
         //        return;
         //    }
-            
+
         //}
 
         //private void salvarToolStripButton_Click(object sender, EventArgs e)
@@ -620,7 +621,7 @@ namespace CursoWindowsForms
 
         //private void Btn_Busca_Click(object sender, EventArgs e)
         //{
-                    
+
         //    try
         //    {
         //        Cliente.Unit C = new Cliente.Unit();
@@ -660,6 +661,166 @@ namespace CursoWindowsForms
         #endregion
 
         #region "CRUD FICHARIOSQLSERVER"
+        //private void novoToolStripButton_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        Cliente.Unit C = new Cliente.Unit();
+
+        //        C = LeituraFormulario();
+        //        C.ValidaClasse();
+        //        C.ValidaComplemento();
+        //        C.IncluirFicharioSQLServer("CLIENTE");
+
+        //        MessageBox.Show($"OK. Identificador incluído com sucesso {C.Id}",
+        //            "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        //    }
+        //    catch (ValidationException Ex)
+        //    {
+        //        MessageBox.Show(Ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        return;
+        //    }
+        //    catch (Exception Ex)
+        //    {
+        //        MessageBox.Show(Ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        return;
+        //    }
+
+        //}
+
+        //private void abrirToolStripButton_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+
+        //        if (string.IsNullOrEmpty(Txt_Codigo.Text))
+        //        {
+        //            MessageBox.Show("O código do cliente está vazio! Insira o código para abrir o formulário desejado!", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //            return;
+        //        }
+
+        //        Cliente.Unit C = new Cliente.Unit();
+        //        C = C.BuscarFicharioSQLServer("CLIENTE", Txt_Codigo.Text);
+        //        EscreveFormulario(C);
+        //    }
+        //    catch (Exception Ex)
+        //    {
+        //        LimparDadosFormulario();
+        //        MessageBox.Show(Ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        return;
+        //    }
+
+        //}
+
+        //private void salvarToolStripButton_Click(object sender, EventArgs e)
+        //{
+        //    if (string.IsNullOrEmpty(Txt_Codigo.Text))
+        //    {
+        //        MessageBox.Show("O código do cliente está vazio! Insira o código para abrir o formulário desejado!", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        return;
+        //    }
+
+        //    try
+        //    {
+        //        Cliente.Unit C = new Cliente.Unit();
+
+        //        C = LeituraFormulario();
+        //        C.ValidaClasse();
+        //        C.ValidaComplemento();
+        //        C.AlterarFormularioSQLServer("CLIENTE");
+
+        //        MessageBox.Show($"Formulário alterado com sucesso. Identificador: {C.Id}",
+        //            "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    }
+        //    catch (ValidationException Ex)
+        //    {
+        //        MessageBox.Show(Ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        return;
+        //    }
+        //    catch (Exception Ex)
+        //    {
+        //        MessageBox.Show(Ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        return;
+        //    }
+
+        //}
+
+        //private void ApagaStripButton_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        if (string.IsNullOrEmpty(Txt_Codigo.Text))
+        //        {
+        //            MessageBox.Show("O código do cliente está vazio! Insira o código para excluir o formulário desejado!", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //            return;
+        //        }
+
+        //        Cliente.Unit C = new Cliente.Unit();
+        //        C = C.BuscarFicharioSQLServer("CLIENTE", Txt_Codigo.Text);
+        //        EscreveFormulario(C);
+
+        //        Frm_Questao questao = new Frm_Questao("Ponto_de_Interrogacao_Imagem",
+        //            "Você quer realmente excluir o formulário do cliente?");
+
+        //        questao.ShowDialog();
+
+        //        if (questao.DialogResult != DialogResult.Yes) return;
+
+        //        C.ApagarFormularioSQLServer("ClIENTE");
+
+        //        LimparDadosFormulario();
+        //        MessageBox.Show($"Formulário com identificador {C.Id} excluído com sucesso!", "Byte Bank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    }
+        //    catch (Exception Ex)
+        //    {
+        //        MessageBox.Show(Ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        return;
+        //    }
+        //}
+
+        //private void Btn_Busca_Click(object sender, EventArgs e)
+        //{
+
+        //    try
+        //    {
+        //        Cliente.Unit C = new Cliente.Unit();
+        //        var lista = C.ListaFicharioSQLServer("CLIENTE");
+
+        //        var listaBusca = new List<List<string>>();
+        //        for (int i = 0; i < lista.Count; i++)
+        //        {
+        //            C = Cliente.DesSerializedUnit(lista[i]);
+        //            listaBusca.Add(new List<string> { C.Id, C.Nome });
+        //        }
+
+
+        //        if (listaBusca.Count <= 0)
+        //        {
+        //            MessageBox.Show("Base de dados está vazia. Nenhum formulário foi encontrado!", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //            return;
+        //        }
+
+        //        Frm_Busca FFrom = new Frm_Busca(listaBusca);
+        //        FFrom.ShowDialog();
+
+        //        if (FFrom.DialogResult != DialogResult.OK) return;
+
+        //        var idSelect = FFrom.idSelect;
+        //        C = C.BuscarFicharioSQLServer("CLIENTE", idSelect);
+
+        //        EscreveFormulario(C);
+        //    }
+        //    catch (Exception Ex)
+        //    {
+        //        MessageBox.Show(Ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        return;
+        //    }
+
+        //}
+        #endregion
+
+        #region "CRUD FICHARIOSQLRel"
         private void novoToolStripButton_Click(object sender, EventArgs e)
         {
             try
@@ -669,7 +830,7 @@ namespace CursoWindowsForms
                 C = LeituraFormulario();
                 C.ValidaClasse();
                 C.ValidaComplemento();
-                C.IncluirFicharioSQLServer("CLIENTE");
+                C.IncluirFicharioSQLRel();
 
                 MessageBox.Show($"OK. Identificador incluído com sucesso {C.Id}",
                     "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -700,7 +861,7 @@ namespace CursoWindowsForms
                 }
 
                 Cliente.Unit C = new Cliente.Unit();
-                C = C.BuscarFicharioSQLServer("CLIENTE", Txt_Codigo.Text);
+                C = C.BuscarFicharioSQLRel(Txt_Codigo.Text);
                 EscreveFormulario(C);
             }
             catch (Exception Ex)
@@ -727,7 +888,7 @@ namespace CursoWindowsForms
                 C = LeituraFormulario();
                 C.ValidaClasse();
                 C.ValidaComplemento();
-                C.AlterarFormularioSQLServer("CLIENTE");
+                C.AlterarFormularioSQLRel(Txt_Codigo.Text);
 
                 MessageBox.Show($"Formulário alterado com sucesso. Identificador: {C.Id}",
                     "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -756,7 +917,7 @@ namespace CursoWindowsForms
                 }
 
                 Cliente.Unit C = new Cliente.Unit();
-                C = C.BuscarFicharioSQLServer("CLIENTE", Txt_Codigo.Text);
+                C = C.BuscarFicharioSQLRel(Txt_Codigo.Text);
                 EscreveFormulario(C);
 
                 Frm_Questao questao = new Frm_Questao("Ponto_de_Interrogacao_Imagem",
@@ -766,7 +927,7 @@ namespace CursoWindowsForms
 
                 if (questao.DialogResult != DialogResult.Yes) return;
 
-                C.ApagarFormularioSQLServer("ClIENTE");
+                C.ApagarFormularioSQLRel();
 
                 LimparDadosFormulario();
                 MessageBox.Show($"Formulário com identificador {C.Id} excluído com sucesso!", "Byte Bank", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -784,17 +945,9 @@ namespace CursoWindowsForms
             try
             {
                 Cliente.Unit C = new Cliente.Unit();
-                var lista = C.ListaFicharioSQLServer("CLIENTE");
+                var listaBusca = C.ListaFicharioSQLRel();
 
-                var listaBusca = new List<List<string>>();
-                for (int i = 0; i < lista.Count; i++)
-                {
-                    C = Cliente.DesSerializedUnit(lista[i]);
-                    listaBusca.Add(new List<string> { C.Id, C.Nome });
-                }
-
-
-                if (listaBusca.Count <= 0)
+                if (!listaBusca.Any())
                 {
                     MessageBox.Show("Base de dados está vazia. Nenhum formulário foi encontrado!", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -806,7 +959,7 @@ namespace CursoWindowsForms
                 if (FFrom.DialogResult != DialogResult.OK) return;
 
                 var idSelect = FFrom.idSelect;
-                C = C.BuscarFicharioSQLServer("CLIENTE", idSelect);
+                C = C.BuscarFicharioSQLRel(idSelect);
 
                 EscreveFormulario(C);
             }
@@ -818,6 +971,5 @@ namespace CursoWindowsForms
 
         }
         #endregion
-
     }
 }
